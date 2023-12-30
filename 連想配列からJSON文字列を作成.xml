@@ -1,0 +1,228 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="e8~e7/_L/Hl.5+z?n2U^">_連想配列</variable>
+    <variable type="" id="e`J7Y!?*^8IxAbJ%8ie~">_JSON文字列</variable>
+    <variable type="" id="--dMOP{XWW1Hu{,n]SgB">_キーのリスト</variable>
+    <variable type="" id="mKfbMgi1x([Z|0A_uQD(">_インデックス</variable>
+    <variable type="" id=";-G5V{yba?PDTJUp=q^+">_キー</variable>
+  </variables>
+  <block type="procedures_defreturn" id="_A,:kkSbxaasD;H%?tXj" x="-862" y="-412">
+    <mutation>
+      <arg name="_連想配列" varid="e8~e7/_L/Hl.5+z?n2U^"></arg>
+    </mutation>
+    <field name="NAME">連想配列からJSON文字列を作成</field>
+    <comment pinned="false" h="80" w="160">v1.0.0</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="rgcv^@9Fq09cxer),u#L">
+        <field name="VAR" id="e`J7Y!?*^8IxAbJ%8ie~" variabletype="">_JSON文字列</field>
+        <value name="VALUE">
+          <block type="text" id="dI:R5Qz3amSLz?L]g7r%">
+            <field name="TEXT">{</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="n~)+5?O1Jy]4b2Ee7D8?">
+            <field name="VAR" id="--dMOP{XWW1Hu{,n]SgB" variabletype="">_キーのリスト</field>
+            <value name="VALUE">
+              <block type="dict_keys" id="gFphu+Cgnz${Vi,1^[L`">
+                <value name="DICT">
+                  <block type="variables_get" id="7HE{)Dva548h9D3^P;Z0">
+                    <field name="VAR" id="e8~e7/_L/Hl.5+z?n2U^" variabletype="">_連想配列</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_for" id="9r*`G6OPWh`lk|X~Bqok">
+                <field name="VAR" id="mKfbMgi1x([Z|0A_uQD(" variabletype="">_インデックス</field>
+                <value name="FROM">
+                  <shadow type="math_number" id="m2S3:(K=V4HrS00N!0KE">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <value name="TO">
+                  <shadow type="math_number" id="=Cly4}h)I1i0hA$_nLZ/">
+                    <field name="NUM">10</field>
+                  </shadow>
+                  <block type="lists_length" id=".Qpj/.t#]f,vGO2!3h;W">
+                    <value name="VALUE">
+                      <block type="variables_get" id="xayy9;c$CYz7-T;aNqF8">
+                        <field name="VAR" id="--dMOP{XWW1Hu{,n]SgB" variabletype="">_キーのリスト</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="BY">
+                  <shadow type="math_number" id="S}DJ^W[RMZ4uo*ZVMzyD">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="variables_set" id="f3F,^5bsV:Opk@gb{a2]">
+                    <field name="VAR" id=";-G5V{yba?PDTJUp=q^+" variabletype="">_キー</field>
+                    <value name="VALUE">
+                      <block type="lists_getIndex" id="+mD39lv@_#po@Q`HT{=K">
+                        <mutation statement="false" at="true"></mutation>
+                        <field name="MODE">GET</field>
+                        <field name="WHERE">FROM_START</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="V[y%:y3ZI1xDuWkpchlG">
+                            <field name="VAR" id="--dMOP{XWW1Hu{,n]SgB" variabletype="">_キーのリスト</field>
+                          </block>
+                        </value>
+                        <value name="AT">
+                          <block type="variables_get" id="0GJP%d86*)|wBGiju+_=">
+                            <field name="VAR" id="mKfbMgi1x([Z|0A_uQD(" variabletype="">_インデックス</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_append" id="$ys}|I0YAmOv%1kY;G$o">
+                        <field name="VAR" id="e`J7Y!?*^8IxAbJ%8ie~" variabletype="">_JSON文字列</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="#pLsi#4bAK?Y|(]B[n!i">
+                            <field name="TEXT"></field>
+                          </shadow>
+                          <block type="text_join" id="Q0sEf73JVTI5B0-#,Z%r">
+                            <mutation items="7"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="Lx4BX*V~408Bsi@V!=Ip">
+                                <field name="TEXT">"</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text_replace" id="o`Tps;v!]7iAwb;:pZ`?">
+                                <value name="TEXT">
+                                  <shadow type="text" id="Y,l(sE7yWbsH8!o;bLaI">
+                                    <field name="TEXT">こんにちは</field>
+                                  </shadow>
+                                  <block type="variables_get" id="WNG?%Nkd^8nSaL`-rlZQ">
+                                    <field name="VAR" id=";-G5V{yba?PDTJUp=q^+" variabletype="">_キー</field>
+                                  </block>
+                                </value>
+                                <value name="FROM">
+                                  <shadow type="text" id="ToS]GU0w`Wjm?4.l]S]K">
+                                    <field name="TEXT">"</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow type="text" id="mrz$iEV!017;C$aOet7$">
+                                    <field name="TEXT">\"</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="@aUtp#Patn3R%e-#UY]x">
+                                <field name="TEXT">"</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="text" id="W9GNx?6I_R{i0b2b3vkH">
+                                <field name="TEXT"> : </field>
+                              </block>
+                            </value>
+                            <value name="ADD4">
+                              <block type="text" id="l9z:(|Er@p5s,I~YN{aF">
+                                <field name="TEXT">"</field>
+                              </block>
+                            </value>
+                            <value name="ADD5">
+                              <block type="text_replace" id="McH-;pEUw|,TJpn6.y/T">
+                                <value name="TEXT">
+                                  <shadow type="text" id="Y,l(sE7yWbsH8!o;bLaI">
+                                    <field name="TEXT">こんにちは</field>
+                                  </shadow>
+                                  <block type="dict_get" id="^ih@`,wFo}2UfY*3hGX^">
+                                    <value name="DICT">
+                                      <block type="variables_get" id="0/VnHqr0`0seDpeWH:0Q">
+                                        <field name="VAR" id="e8~e7/_L/Hl.5+z?n2U^" variabletype="">_連想配列</field>
+                                      </block>
+                                    </value>
+                                    <value name="KEY">
+                                      <block type="variables_get" id=":C*x0}McV)PYp?V(9}Y9">
+                                        <field name="VAR" id=";-G5V{yba?PDTJUp=q^+" variabletype="">_キー</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="FROM">
+                                  <shadow type="text" id="eFL,`D7:xu@4vU-|=v)A">
+                                    <field name="TEXT">"</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow type="text" id="VhI{R89Tk^PL|ZG_)O5H">
+                                    <field name="TEXT">\"</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD6">
+                              <block type="text" id="qokuH7fGdxj}3-23}:Wk">
+                                <field name="TEXT">"</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="RWVOI#WKsyXvZ,*5Z%A[">
+                            <value name="IF0">
+                              <block type="logic_compare" id="vZhX$MWWHrjz!REW593-">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="?7B1;DE|YBFj]/dqs7B[">
+                                    <field name="VAR" id="mKfbMgi1x([Z|0A_uQD(" variabletype="">_インデックス</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="lists_length" id="wDrARCSuN$BGaaR)r2Pm">
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="^3)y^vylYG$IiIWCi{)c">
+                                        <field name="VAR" id="--dMOP{XWW1Hu{,n]SgB" variabletype="">_キーのリスト</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="text_append" id="z_uS6s3p2KknT9*f^YvL">
+                                <field name="VAR" id="e`J7Y!?*^8IxAbJ%8ie~" variabletype="">_JSON文字列</field>
+                                <value name="TEXT">
+                                  <shadow type="text" id=",ffX1HEqQvwhP+UK^*S*">
+                                    <field name="TEXT">,</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_append" id="9u9s)P9#M?AE)h#1AB0|">
+                    <field name="VAR" id="e`J7Y!?*^8IxAbJ%8ie~" variabletype="">_JSON文字列</field>
+                    <value name="TEXT">
+                      <shadow type="text" id="5;(UnEmjhjM{cCNPlr.*">
+                        <field name="TEXT">}</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="(KyHq|3r=Wk;/q;q:|dU">
+        <field name="VAR" id="e`J7Y!?*^8IxAbJ%8ie~" variabletype="">_JSON文字列</field>
+      </block>
+    </value>
+  </block>
+</xml>

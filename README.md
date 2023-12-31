@@ -34,7 +34,7 @@
 
 ### 「連想配列の値のリスト」ブロック
 
-[https://github.com/3110/robrick-convenience-functions/raw/main/連想配列の値のリスト.xml](https://github.com/3110/robrick-convenience-functions/raw/main/%E9%80%A3%E6%83%B3%E9%85%8D%E5%88%97%E3%81%AE%E5%80%A4%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88.xml)（リンクを右クリックして「名前を付けてリンク先を保存」）
+[連想配列の値のリスト.xml](https://github.com/3110/robrick-convenience-functions/raw/main/%E9%80%A3%E6%83%B3%E9%85%8D%E5%88%97%E3%81%AE%E5%80%A4%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88.xml)（リンクを右クリックして「名前を付けてリンク先を保存」）
 
 「連想配列のキーのリスト」ブロックはありますが，連想配列の値のリストを返すブロクがなかったので作成しました。
 

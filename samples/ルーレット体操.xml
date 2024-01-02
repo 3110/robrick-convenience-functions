@@ -1,0 +1,2153 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="vbh#)5l,e.*Yo;$z}q{@">_ダンス名</variable>
+    <variable type="" id="hQT2}$6=#7ZDS]!a+OX$">バージョン</variable>
+    <variable type="" id="JN!L(g[#HzC1}*q8L2Wt">ダンスリスト</variable>
+    <variable type="" id="x{-)Fq#Fls^rj8V%:(uK">体操を選択する発話リスト</variable>
+    <variable type="" id="YB!qY:NMPH:U1RV^.zxK">選択する発話</variable>
+    <variable type="" id="xE/sPaHk^W~m@3z]j}]x">ダンス名</variable>
+  </variables>
+  <block type="robohon_listenStart" id="TPCAeM0IEn7=_Ai`RWq)" x="-762" y="-363">
+    <value name="KEYWORD">
+      <shadow type="text" id="Ja|kj-_qX``nO4{Hv(NT">
+        <field name="TEXT">ダンスシヨウ</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="variables_set" id="#($GZn.X@bX[p/w?Xnx.">
+        <field name="VAR" id="hQT2}$6=#7ZDS]!a+OX$" variabletype="">バージョン</field>
+        <value name="VALUE">
+          <block type="text" id="ux.]v?f9oBxUjwA7Bxu;">
+            <field name="TEXT">0.0.2</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="$c:PlQ61s!m#wR_x#ts5">
+            <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+            <value name="VALUE">
+              <block type="dict_create_empty" id="DgYa~pT%y9uk,QsDWgC,"></block>
+            </value>
+            <next>
+              <block type="dict_add" id="6yC8~pbo_4S(7*.P:IEw">
+                <value name="DICT">
+                  <block type="variables_get" id="N$o=L[UW.3$xM)W(sFQ:">
+                    <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                  </block>
+                </value>
+                <value name="KEY">
+                  <block type="text" id="W.C`S*e$,spokJ563l_N">
+                    <field name="TEXT">ロボホン体操</field>
+                  </block>
+                </value>
+                <value name="VALUE">
+                  <block type="text" id="yS^f!aoCj^$OD#~exy(1">
+                    <field name="TEXT">ロボホン体操だね</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="dict_add" id="lWprvqB}..sE@=hv3N(!">
+                    <value name="DICT">
+                      <block type="variables_get" id="#}`9xa27[boV4`5Xbl5T">
+                        <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                      </block>
+                    </value>
+                    <value name="KEY">
+                      <block type="text" id="ibz!O-[@hD$Z7h4wK^8(">
+                        <field name="TEXT">ラジオ体操</field>
+                      </block>
+                    </value>
+                    <value name="VALUE">
+                      <block type="text" id="ZxD.0xqf(,zrvyE$y$sk">
+                        <field name="TEXT">ラジオ体操にしよう</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="dict_add" id="b6nJwe.[A=8GcfOsucWc">
+                        <value name="DICT">
+                          <block type="variables_get" id="W_/WNf90+7R=?g_4(0VD">
+                            <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                          </block>
+                        </value>
+                        <value name="KEY">
+                          <block type="text" id="gVsrr5s*gyqW49ht*u?W">
+                            <field name="TEXT">ロボホンズブートキャンプ</field>
+                          </block>
+                        </value>
+                        <value name="VALUE">
+                          <block type="text" id="==oGTv@/X6NS!_yV(}f^">
+                            <field name="TEXT">ロボホンズブートキャンプ，いくよー！</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dict_add" id="aBl6Jw37:#Y2wBS#IV.d">
+                            <value name="DICT">
+                              <block type="variables_get" id="Sec:SxW%_F{x!yEJqM?*">
+                                <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                              </block>
+                            </value>
+                            <value name="KEY">
+                              <block type="text" id="5G|,dZ!hpY@WH1GRUc$d">
+                                <field name="TEXT">ヲタ芸</field>
+                              </block>
+                            </value>
+                            <value name="VALUE">
+                              <block type="text" id="8S}1fp{oqC?U?tyaZ@-}">
+                                <field name="TEXT">オタ芸打つよ</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="kS$pb;`1^j~JYnFCct-|">
+                                <field name="VAR" id="x{-)Fq#Fls^rj8V%:(uK" variabletype="">体操を選択する発話リスト</field>
+                                <value name="VALUE">
+                                  <block type="lists_create_with" id="S3A78mdP(0~`O_)n~h~-">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="ec|aQ2)k;0;ywXT^`]q:">
+                                        <field name="TEXT">まずは，どれにしようかなぁ</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="text" id="ZC_Wq3e1Z56hzmqm^]/H">
+                                        <field name="TEXT">次は，どうしようかなぁ</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="robohon_speak" id="`0%=B;[;w},@)ORKY}}f">
+                                    <value name="WORD">
+                                      <shadow type="text" id="l)QA9um7IgHUJOmFgYEU">
+                                        <field name="TEXT">うん！何をやるか，僕が考えるね！</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="controls_forEach" id="E;TRs}-6r%Yyvf}YNA/p">
+                                        <field name="VAR" id="YB!qY:NMPH:U1RV^.zxK" variabletype="">選択する発話</field>
+                                        <value name="LIST">
+                                          <block type="variables_get" id="V+jYEg~LQY2qzY$-ltQ)">
+                                            <field name="VAR" id="x{-)Fq#Fls^rj8V%:(uK" variabletype="">体操を選択する発話リスト</field>
+                                          </block>
+                                        </value>
+                                        <statement name="DO">
+                                          <block type="robohon_speak" id="Dr_HRhzjZa_@/NFvAed_">
+                                            <value name="WORD">
+                                              <shadow type="text" id="4:M^xyRe?+-lq#%~ME|Z">
+                                                <field name="TEXT">こんにちは</field>
+                                              </shadow>
+                                              <block type="variables_get" id="hF!WWh$kAPFBn-)ssJ#P">
+                                                <field name="VAR" id="YB!qY:NMPH:U1RV^.zxK" variabletype="">選択する発話</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="*IQq-4%wl)Ia$e35b[LH">
+                                                <field name="VAR" id="xE/sPaHk^W~m@3z]j}]x" variabletype="">ダンス名</field>
+                                                <value name="VALUE">
+                                                  <block type="lists_getIndex" id="~ZB1^v}Lv].)N)ML5}?/">
+                                                    <mutation statement="false" at="false"></mutation>
+                                                    <field name="MODE">GET</field>
+                                                    <field name="WHERE">RANDOM</field>
+                                                    <value name="VALUE">
+                                                      <block type="dict_keys" id="H9A{OpK!b@:K;Va3B1q[">
+                                                        <value name="DICT">
+                                                          <block type="variables_get" id="fs.;qo-OcwXN:]|@Dml+">
+                                                            <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="robohon_speak" id="RT6[Qx:_vP$=@2gh.~tZ">
+                                                    <value name="WORD">
+                                                      <shadow type="text" id="X%pe+]Yo9%gAeJ3eg(Ju">
+                                                        <field name="TEXT">こんにちは</field>
+                                                      </shadow>
+                                                      <block type="dict_get" id="=U0bj($Zswhq5#fZjaK%">
+                                                        <value name="DICT">
+                                                          <block type="variables_get" id="`Ggf*N{=ZCeR_*gWeT45">
+                                                            <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="KEY">
+                                                          <block type="variables_get" id="#d,%;PV=8t%006XEqW?Y">
+                                                            <field name="VAR" id="xE/sPaHk^W~m@3z]j}]x" variabletype="">ダンス名</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="procedures_callnoreturn" id="?+370ENyI~B=c~AelsP6">
+                                                        <mutation name="ダンスを踊る">
+                                                          <arg name="_ダンス名"></arg>
+                                                        </mutation>
+                                                        <value name="ARG0">
+                                                          <block type="variables_get" id="}r_U?ho`%UYL6([9Vm/f">
+                                                            <field name="VAR" id="xE/sPaHk^W~m@3z]j}]x" variabletype="">ダンス名</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="dict_delete" id="~A%CrI`R)b:Hg-aB)YD,">
+                                                            <value name="DICT">
+                                                              <block type="variables_get" id="q#c:@bUpOR,`RwSI!HDV">
+                                                                <field name="VAR" id="JN!L(g[#HzC1}*q8L2Wt" variabletype="">ダンスリスト</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="KEY">
+                                                              <block type="variables_get" id="569`JRu_).qo0.EW%p{`">
+                                                                <field name="VAR" id="xE/sPaHk^W~m@3z]j}]x" variabletype="">ダンス名</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="robohon_speak" id="iIp)hHRB|ed.meY*0T,w">
+                                            <value name="WORD">
+                                              <shadow type="text" id="KJ9ZyhaPAt~?hqFNp+WE">
+                                                <field name="TEXT">わーい！凄いね！終わったよ！お疲れさま！明日もやろうね！</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="PetZ:{78Jv[ws6[2ip!~" collapsed="true" x="338" y="-338">
+    <mutation>
+      <arg name="_ダンス名" varid="vbh#)5l,e.*Yo;$z}q{@"></arg>
+    </mutation>
+    <field name="NAME">ダンスを踊る</field>
+    <comment pinned="false" h="80" w="160">ダンス名（2023年12月21日現在）を指定して踊る関数</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="zCx/#Ps!W?bYAu.,jZ{a">
+        <mutation elseif="93" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="ix;hqx4L.LY`Jmn}cU#c">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="0@;/LWQ3A}?k]4;*D^ma">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="83!F0x,mG5siHhS#sA=O">
+                <field name="TEXT">アイネ・クライネ・ナハトムジーク</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="robohon_dance" id="sI@qEDxx*b`^9]G{9q+V">
+            <field name="DANCE">1</field>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="|u(;@}or.Hyt-QVB@G|H">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Kp{3h0R-;)aN:/TRcwxl">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="x9m*%tw1uS?Ehg2Y3wO}">
+                <field name="TEXT">大きな栗の木の下で</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="robohon_dance" id="f30n*(@G=559^p%H#1V6">
+            <field name="DANCE">2</field>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="9UO4I/;tzN25#m)ta1kp">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="l`DZzgg#|jeK%%O}B^^s">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="?5B%x{0-4]mUT8S[GmAo">
+                <field name="TEXT">阿波踊り</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="robohon_dance" id=".L|#Knx!K/mPu1I#UJ7X">
+            <field name="DANCE">3</field>
+          </block>
+        </statement>
+        <value name="IF3">
+          <block type="logic_compare" id="mgEB#noKTz_[qdH4n{]h">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="aL1K;v[-#.EG1k]K}e`h">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="{$rm:`!FcuU%aQ5*#g]}">
+                <field name="TEXT">エアギター</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="robohon_dance" id="*nNC/$!I8rMj8R~fG)9c">
+            <field name="DANCE">4</field>
+          </block>
+        </statement>
+        <value name="IF4">
+          <block type="logic_compare" id="5W%|liC-sbJ@kj`+sfy9">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="EnuR-f~bhnWhm^tB+M#Y">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="ju4XeZU,{}$KKp[}!X.U">
+                <field name="TEXT">糸巻きの歌</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO4">
+          <block type="robohon_dance" id="gjGW;AeR3EP$m`dv8o_]">
+            <field name="DANCE">5</field>
+          </block>
+        </statement>
+        <value name="IF5">
+          <block type="logic_compare" id="#wbYB.HUHx(xCa/`Dy@a">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="DkVEI=3E*F*[,Bx{l{;*">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="_}-SFZHEY)}bv*63X05y">
+                <field name="TEXT">結んで開いて</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO5">
+          <block type="robohon_dance" id="6M1yDP),TV|[sZsb.ktl">
+            <field name="DANCE">6</field>
+          </block>
+        </statement>
+        <value name="IF6">
+          <block type="logic_compare" id="@A=GC{~3Sb]pjgA)L;74">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Uu$PtKr;,8,^`ydl[2JM">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="OZ]~_K)R;0;F_#2/t5uI">
+                <field name="TEXT">げんこつ山の狸さん</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO6">
+          <block type="robohon_dance" id="E`DUu0y|#;M4:RI-j,{-">
+            <field name="DANCE">7</field>
+          </block>
+        </statement>
+        <value name="IF7">
+          <block type="logic_compare" id="y3I5vq]fg4Of|%;aEa@9">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="twSOfp`wF*zH#^YSmC[,">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Kh1Jrdc:YhF;umn##P:Q">
+                <field name="TEXT">交響曲第9番</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO7">
+          <block type="robohon_dance" id=")M;g?n2p0s_8*Cr%.=Q@">
+            <field name="DANCE">8</field>
+          </block>
+        </statement>
+        <value name="IF8">
+          <block type="logic_compare" id="$saXA.wPe3=Ga(.Q|y|,">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Q;Ma$u@AQgB2(Y(L4#]6">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="qBF|%z6u$22z4B-;@8*b">
+                <field name="TEXT">ジングルベル</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO8">
+          <block type="robohon_dance" id="[hx/Vx:x]@^AN/Ujxahz">
+            <field name="DANCE">9</field>
+          </block>
+        </statement>
+        <value name="IF9">
+          <block type="logic_compare" id="FGY6(o4Zo{/Cv=FJliI^">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="^slL./=wXBbOe-^,Xt=h">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="m8I0nuNDKYfzaY,j7R($">
+                <field name="TEXT">カンフー</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO9">
+          <block type="robohon_dance" id="Lcsp80(,5zUYj%G[`_TP">
+            <field name="DANCE">10</field>
+          </block>
+        </statement>
+        <value name="IF10">
+          <block type="logic_compare" id="jC#(/e2pa53fMQ.Nh/rm">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="VH$.X_P|$VK^6Q]_enL#">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="IhQMDX^;Rks9+`C0BnUJ">
+                <field name="TEXT">80年代ディスコ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO10">
+          <block type="robohon_dance" id="#S-kZ]L#B4;9Q#6%FSJr">
+            <field name="DANCE">11</field>
+          </block>
+        </statement>
+        <value name="IF11">
+          <block type="logic_compare" id="oj0-uI)KEB=Il.N4{XVe">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="7OcwC8M;I65W]P$TU(`$">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="}8ZFU@]cu(h?hRrsm:99">
+                <field name="TEXT">さくら</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO11">
+          <block type="robohon_dance" id="M|z%~q1Lc^|vu/6paW7w">
+            <field name="DANCE">12</field>
+          </block>
+        </statement>
+        <value name="IF12">
+          <block type="logic_compare" id=",DgdH5E(4EcI=!FIec*x">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="ew@HLRt#pxH3eP?HYIR4">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="$p{,+#M(I`jjwHh{DG1}">
+                <field name="TEXT">ミリタリーマーチ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO12">
+          <block type="robohon_dance" id="o~45fK|~m?MSV{cQMK*~">
+            <field name="DANCE">13</field>
+          </block>
+        </statement>
+        <value name="IF13">
+          <block type="logic_compare" id="@Tk-+NYib5/aCj4B(ls~">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="NwgqZ:f~|^,yAlcQ=s,E">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="$0G_-`bt~/oMJcs.!J+H">
+                <field name="TEXT">フラメンコ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO13">
+          <block type="robohon_dance" id="Ctj?(5kLcvnd/e%0DIK`">
+            <field name="DANCE">14</field>
+          </block>
+        </statement>
+        <value name="IF14">
+          <block type="logic_compare" id="4j*2K(2=g;0y~GXtP~Qv">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="^m`]I7^ftuNaUcs9BhhQ">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="n(d./BM1[F/UJ5`a8wKo">
+                <field name="TEXT">フラダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO14">
+          <block type="robohon_dance" id="|,==l:~(fLeoo|wAhNoS">
+            <field name="DANCE">15</field>
+          </block>
+        </statement>
+        <value name="IF15">
+          <block type="logic_compare" id="|5/$j8k=bFvu$F!ew(9U">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="93[vm2Rb*OXpUU*g],u!">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="AlBDhM+nqps.r:/1}gv)">
+                <field name="TEXT">野球応援</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO15">
+          <block type="robohon_dance" id="z+Rg]nTK=Q%6zOHpBDp7">
+            <field name="DANCE">16</field>
+          </block>
+        </statement>
+        <value name="IF16">
+          <block type="logic_compare" id="n2e6H;#vIWC4QPpgeqV|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="yX7lDdSn[R*9)zYy_2ip">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="HWPLK43vy6rxB8IL[XX:">
+                <field name="TEXT">チェッコリ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO16">
+          <block type="robohon_dance" id="2cT}|oJs#LpDRoQOO_/g">
+            <field name="DANCE">17</field>
+          </block>
+        </statement>
+        <value name="IF17">
+          <block type="logic_compare" id="PP]hvO]FCh-msc9bh/60">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id=":R%;u?#~BaEgpE4[-a_z">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="e%91tbcWd/@pnt??.V$!">
+                <field name="TEXT">体遊びの歌</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO17">
+          <block type="robohon_dance" id="h-0svZr1}A!o{Lf-#^}d">
+            <field name="DANCE">18</field>
+          </block>
+        </statement>
+        <value name="IF18">
+          <block type="logic_compare" id="_zmI8?UwJZ[l5-^=6I?8">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="~FhlIyXo=7`-::opofe?">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="-JQ-NYZ=9tM^^eW=N@*e">
+                <field name="TEXT">和太鼓</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO18">
+          <block type="robohon_dance" id="j)NDC|lSP6#=%80cBc9e">
+            <field name="DANCE">19</field>
+          </block>
+        </statement>
+        <value name="IF19">
+          <block type="logic_compare" id="yfa+iuiO^s~QprgIM,S6">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="xLRO1ntdSp|%d_FKR*hW">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="PAQ!=6+%+_(/5E3cAB!o">
+                <field name="TEXT">もろびとこぞりて</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO19">
+          <block type="robohon_dance" id="ttb0[nKyW}qdvX_}X#he">
+            <field name="DANCE">20</field>
+          </block>
+        </statement>
+        <value name="IF20">
+          <block type="logic_compare" id="T-{Qt4sK^VQJ%Tt.!bl?">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="bN)x]#IdY]YR$L1jH$Fs">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="[F}kbg,n]xL?D}+Q$tjM">
+                <field name="TEXT">歌舞伎</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO20">
+          <block type="robohon_dance" id="5gE.wAuu*:]^2[U@3qX+">
+            <field name="DANCE">21</field>
+          </block>
+        </statement>
+        <value name="IF21">
+          <block type="logic_compare" id="mM9+_=a051C))WCkp3Xd">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="b97-Hxts[M-riVH[P|FY">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="z!lQOQr1J,Ra#8N#6/-:">
+                <field name="TEXT">くるみ割り人形</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO21">
+          <block type="robohon_dance" id="z.8aGJ^:sN)6}}y-AJGN">
+            <field name="DANCE">22</field>
+          </block>
+        </statement>
+        <value name="IF22">
+          <block type="logic_compare" id="?/%j5VQv;tEh3=e~9xET">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="t/doO-JHsjN/QDHP/)[O">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="4Q~(v3S/QTyyt8ug*$uS">
+                <field name="TEXT">ひな祭り</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO22">
+          <block type="robohon_dance" id="vfXDkOtMp1lQ%L@Go|{B">
+            <field name="DANCE">23</field>
+          </block>
+        </statement>
+        <value name="IF23">
+          <block type="logic_compare" id="=)?{rV#:fbL/FL,l!m3m">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="0Q=PzpJw]5iOAlpaMrW)">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=":4!8pax)]e)DU0~wi9c]">
+                <field name="TEXT">ロボホン体操</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO23">
+          <block type="robohon_dance" id="2aAq.SPp;PU#r~]gcTn/">
+            <field name="DANCE">24</field>
+          </block>
+        </statement>
+        <value name="IF24">
+          <block type="logic_compare" id="V!C+P:%w:;w8*2+P6My8">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="I?9|FcdXl85l)~.Xr!Rh">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="06En*629=TUg+ayFLGY1">
+                <field name="TEXT">天国と地獄</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO24">
+          <block type="robohon_dance" id="*a][v-R~$w1LR2Y/eQ;v">
+            <field name="DANCE">25</field>
+          </block>
+        </statement>
+        <value name="IF25">
+          <block type="logic_compare" id="3]c,_^9aYu@mCRp(CehD">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="u12jvd!iu~f#U/lf92/f">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Ph5nN5EPNRUta-T_-Bfk">
+                <field name="TEXT">70年代ディスコ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO25">
+          <block type="robohon_dance" id="d|HhcU+r4ZfEba?j(Mh7">
+            <field name="DANCE">26</field>
+          </block>
+        </statement>
+        <value name="IF26">
+          <block type="logic_compare" id=")4022)dD#M)u)D]qIkT2">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="XjiTc^s%o8K[cF0=s4wf">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="W(s,428R_gNW8/(4B.Sp">
+                <field name="TEXT">我は海の子</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO26">
+          <block type="robohon_dance" id="Jvg;?XKE[}o24GC9H]:D">
+            <field name="DANCE">27</field>
+          </block>
+        </statement>
+        <value name="IF27">
+          <block type="logic_compare" id="YMi{fP4]s~,1kkTbHRT!">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="~H5ZxJ;*{Fy?n.Fm:bF%">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=".x?X70L?foE%aYB?o*Q@">
+                <field name="TEXT">ロボホン音頭</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO27">
+          <block type="robohon_dance" id="ms/]B)^2PTpjbesU=tgf">
+            <field name="DANCE">28</field>
+          </block>
+        </statement>
+        <value name="IF28">
+          <block type="logic_compare" id="n~k~XE}W_wmF?_3gDuO3">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="0A.MyECiM%u{|x)H[SJS">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="=m:;P-MAKyy/:IfIWET6">
+                <field name="TEXT">エアバイオリン</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO28">
+          <block type="robohon_dance" id="d2S_gobut7M)-)AI(XND">
+            <field name="DANCE">29</field>
+          </block>
+        </statement>
+        <value name="IF29">
+          <block type="logic_compare" id="9$9^}gr!tq|mGHAC$a;d">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="r#a?=G/IelDRKgpe1fW[">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="KeUA5)PtrDf.DsvcsJBn">
+                <field name="TEXT">タップダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO29">
+          <block type="robohon_dance" id="BY)|p7Ba4b(^BX+JMil:">
+            <field name="DANCE">30</field>
+          </block>
+        </statement>
+        <value name="IF30">
+          <block type="logic_compare" id="3|+!qnv%PW{$$8gygyP-">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="(zhjZQdIvp.G2*pnrO!^">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="7FxT3w[1@D_Zq;|FY6y~">
+                <field name="TEXT">パラパラ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO30">
+          <block type="robohon_dance" id="0#J+4M3w5z26.Q85QZKF">
+            <field name="DANCE">31</field>
+          </block>
+        </statement>
+        <value name="IF31">
+          <block type="logic_compare" id="H/g@AnmBlBM~LQ^S/oBw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="T$-?Zql8c`l@(d8s:y`z">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="C}wj{~ow~!ws5+*%ggAD">
+                <field name="TEXT">おめでとうクリスマス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO31">
+          <block type="robohon_dance" id="y(:J@oS}pyV(+dH~nCD-">
+            <field name="DANCE">32</field>
+          </block>
+        </statement>
+        <value name="IF32">
+          <block type="logic_compare" id="c~c%@Aqe6F;+tBs(6ehS">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="niI0M^.fq6!i?N0.TCn-">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=",Kp;mfa.PlI9}9c0HMP1">
+                <field name="TEXT">うさぎのダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO32">
+          <block type="robohon_dance" id="a`GcSTfgq9B%CaXxKg60">
+            <field name="DANCE">33</field>
+          </block>
+        </statement>
+        <value name="IF33">
+          <block type="logic_compare" id="hFs1iz~?rXBRz4SIdaYe">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="DxKdKf8#GO1MIM/P.sR9">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="{1?$;RlP}UX@cqdiC[dL">
+                <field name="TEXT">コサックダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO33">
+          <block type="robohon_dance" id="Xt63RPGr_K@oZ,Idwu:)">
+            <field name="DANCE">34</field>
+          </block>
+        </statement>
+        <value name="IF34">
+          <block type="logic_compare" id="^ip^qetSeHnWr+Tu}s!B">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="!Yg4nI9CV1h!?8pMwTZk">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="9Is;$L2h2SGu9]QOE6ve">
+                <field name="TEXT">子守唄</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO34">
+          <block type="robohon_dance" id="rrMQ]_/X*5+Df6jI|Y_D">
+            <field name="DANCE">35</field>
+          </block>
+        </statement>
+        <value name="IF35">
+          <block type="logic_compare" id=",a(A,=#h|?5+6Y{LKip`">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="6g!X==m#Ogu@z3`#Mduo">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Jmuo6OXyb{3mU~{I7S;?">
+                <field name="TEXT">チアリーディング</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO35">
+          <block type="robohon_dance" id="eRR0t@9qycUedI}dr?I.">
+            <field name="DANCE">36</field>
+          </block>
+        </statement>
+        <value name="IF36">
+          <block type="logic_compare" id="FH$:1J$lw@lS.oEnl|os">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="dv(oPwHs?PJ1I2_ggH3Z">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="oGg6_4FyuXyVXd3dx89X">
+                <field name="TEXT">マーチングバンド</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO36">
+          <block type="robohon_dance" id=".nA1oM3(7HKCFggdnGyG">
+            <field name="DANCE">37</field>
+          </block>
+        </statement>
+        <value name="IF37">
+          <block type="logic_compare" id="S/~liP_BrLSam!NuYS5B">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="!X@PR]CW.y3An8Ms/-]9">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="ELo4cMJikJDpyt$Rso/A">
+                <field name="TEXT">森のくまさん</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO37">
+          <block type="robohon_dance" id="j)N+.SXH;Q+#KfFrur6S">
+            <field name="DANCE">38</field>
+          </block>
+        </statement>
+        <value name="IF38">
+          <block type="logic_compare" id="fMQ!Q2w0GCs,dn%^5X]Y">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="p]yD[j.RoZe#3YO?7/nt">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="yWX9X*Oi-0G(eG-Xnv+Q">
+                <field name="TEXT">ラジオ体操</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO38">
+          <block type="robohon_dance" id="x3Q[xajwhubY{Te@m|CH">
+            <field name="DANCE">39</field>
+          </block>
+        </statement>
+        <value name="IF39">
+          <block type="logic_compare" id=".vi4#Ono*Q2h@iqeKMu;">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="9aZnR]4v1IfNT,V^v(%I">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="NU#Cl_*kC0eg#[1%?brO">
+                <field name="TEXT">ロボホンズブートキャンプ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO39">
+          <block type="robohon_dance" id="tY#:XYxD6{P.Y|B}]/0j">
+            <field name="DANCE">40</field>
+          </block>
+        </statement>
+        <value name="IF40">
+          <block type="logic_compare" id="Nq00!Xr.W8x+%lb3eR73">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="pt.{RTS3mw^UKCHGM(b!">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="1_X7i7+bhc/*=nN/2T0:">
+                <field name="TEXT">ハカ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO40">
+          <block type="robohon_dance" id="/K[wos3sGox;PqC-lyy2">
+            <field name="DANCE">41</field>
+          </block>
+        </statement>
+        <value name="IF41">
+          <block type="logic_compare" id="vMG1w3WTHzse#K,nqbeF">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="aY5E~WcIS*~?$YxvtpLN">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="3_E,1X4oDRQr1CQ$et{4">
+                <field name="TEXT">ちゃんばらごっこ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO41">
+          <block type="robohon_dance" id="2Kd1B*7M}bB2N-[}v0TU">
+            <field name="DANCE">42</field>
+          </block>
+        </statement>
+        <value name="IF42">
+          <block type="logic_compare" id="7M`mP/T/Z+ar]!t-vCC7">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Ay4[kYd?$A*C;J=7Z^=7">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Rw_/xMp]z++!mPMb/KLE">
+                <field name="TEXT">ヲタ芸</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO42">
+          <block type="robohon_dance" id="2mlNtOlf97dUwYO7^xZ@">
+            <field name="DANCE">43</field>
+          </block>
+        </statement>
+        <value name="IF43">
+          <block type="logic_compare" id="Xq^W@8K[E}rjqy+%[Twy">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="dW3mu9CWttX~zgQLA.GI">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="oCN*t{J2:o~4rrC7btBM">
+                <field name="TEXT">きよしこの夜</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO43">
+          <block type="robohon_dance" id="L*CNw$R/Q`3|nb+2CN;S">
+            <field name="DANCE">44</field>
+          </block>
+        </statement>
+        <value name="IF44">
+          <block type="logic_compare" id="fvtnmJ$j[CA_v1XrTM_5">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="`s9ubDcjhr0%($wyW^@p">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="zWXw0(PIFHjOt@eU:]G9">
+                <field name="TEXT">春の海</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO44">
+          <block type="robohon_dance" id="xM3;-{nw[aFH+y;uQ[Np">
+            <field name="DANCE">45</field>
+          </block>
+        </statement>
+        <value name="IF45">
+          <block type="logic_compare" id="4M]-%1lfHM|b7K[F(=)Z">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="DG^fc,S;jJs,QZ%HCw61">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="AI3@,nKF8%:PP={/Y]|[">
+                <field name="TEXT">白鳥の湖</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO45">
+          <block type="robohon_dance" id="]ewk-p.A7{-lNZ3Eoh3M">
+            <field name="DANCE">46</field>
+          </block>
+        </statement>
+        <value name="IF46">
+          <block type="logic_compare" id="a+3mf|ly4O#4RJ4@72`k">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="[nmNoWh0x]SpgH~wHx2#">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="J#.iH`ozI5VBz5%h522g">
+                <field name="TEXT">タンゴ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO46">
+          <block type="robohon_dance" id="MTzi#QX:k/oRdN}+?c#M">
+            <field name="DANCE">47</field>
+          </block>
+        </statement>
+        <value name="IF47">
+          <block type="logic_compare" id="gp2!q;F,obR?Ga[Pw:n`">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="-n:f4%)?MtJ`a(8oYg%Y">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="MB,GFy/0J%kWQzhhK~OZ">
+                <field name="TEXT">忍者のダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO47">
+          <block type="robohon_dance" id="q;@O*ld9Ey`4PDUA?w|x">
+            <field name="DANCE">48</field>
+          </block>
+        </statement>
+        <value name="IF48">
+          <block type="logic_compare" id="%).BFA;sK]Bs6Br0*!Q0">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="6=}88e;X[,FNIqN1`:BH">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="(M~fgM)7|o222VZU-2p/">
+                <field name="TEXT">インド舞踊</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO48">
+          <block type="robohon_dance" id="w0A6xy+@%G1Fj%fH-jKG">
+            <field name="DANCE">49</field>
+          </block>
+        </statement>
+        <value name="IF49">
+          <block type="logic_compare" id="c_H.T1u-P6ckA(AN_x$|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="w%TzZb[=|E?(mt+bECdJ">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="9$D!++FZCyyz$atl[xa-">
+                <field name="TEXT">ソーラン節</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO49">
+          <block type="robohon_dance" id="6`u(e%3uA}n_kc(_JZAA">
+            <field name="DANCE">50</field>
+          </block>
+        </statement>
+        <value name="IF50">
+          <block type="logic_compare" id="~b7)i(k8Noi$,^;x9q~l">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="U]ohZNIJ-Hv3g@6;k}I!">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="UuyBUX?T,`J[dv)e-cd`">
+                <field name="TEXT">おべんとうばこのうた</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO50">
+          <block type="robohon_dance" id="5+S!I{}5]671G^8qR`3.">
+            <field name="DANCE">51</field>
+          </block>
+        </statement>
+        <value name="IF51">
+          <block type="logic_compare" id="tvV/B+TlU,1DhJ8opoz(">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="W__o{w7Grp3`^~2Ke.!*">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="|@I`8EapC]itX5=W@^)l">
+                <field name="TEXT">太極拳</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO51">
+          <block type="robohon_dance" id="Ke6z@lv]sGnD_7O-Az~|">
+            <field name="DANCE">52</field>
+          </block>
+        </statement>
+        <value name="IF52">
+          <block type="logic_compare" id="Neyd1Wk1@+*![x{a[~,/">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="!(UHvhbScXLPi?Ng,@~D">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="QRoxw-$D#ER=qP_}Ne/k">
+                <field name="TEXT">グーチョキパーでなにつくろう</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO52">
+          <block type="robohon_dance" id="yF7NGfy*Vou+hCtIS9~w">
+            <field name="DANCE">53</field>
+          </block>
+        </statement>
+        <value name="IF53">
+          <block type="logic_compare" id="QA`q[[{kL5^#1xm^!YsP">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="gDQZW/R[eRiIjY9]AXnr">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="ig[F$]e0KY=4E1zjj=jH">
+                <field name="TEXT">ロボホン体操第2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO53">
+          <block type="robohon_dance" id="hbP={$sag-Z2eh%8-lCj">
+            <field name="DANCE">54</field>
+          </block>
+        </statement>
+        <value name="IF54">
+          <block type="logic_compare" id="sK3U-{1Rt;JC;[:@i`H;">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="MO;5v:`bk3-M5^`,uP5w">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="s:)]phKyv=+2#w82rwfJ">
+                <field name="TEXT">ツイスト</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO54">
+          <block type="robohon_dance" id="dRZAKE9u4D,-K!=52=@:">
+            <field name="DANCE">55</field>
+          </block>
+        </statement>
+        <value name="IF55">
+          <block type="logic_compare" id="~VVditvk_$K2Zorq@BhS">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Sf/L7__SL{8d*m^{*Q0v">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="p,NwaUcZ8n6RZ(T|I,^k">
+                <field name="TEXT">ひいらぎかざろう</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO55">
+          <block type="robohon_dance" id="!kFvEbWL-BnL8CsPxh_8">
+            <field name="DANCE">56</field>
+          </block>
+        </statement>
+        <value name="IF56">
+          <block type="logic_compare" id=")(%Gqsz~[}:]n]L(Za~/">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="4ryxn=)irVO+^vl{MZSW">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="6es2?%{3^o%o0Cltw@(M">
+                <field name="TEXT">一月一日</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO56">
+          <block type="robohon_dance" id="z?:mZP{F=n7z6!y|}-98">
+            <field name="DANCE">57</field>
+          </block>
+        </statement>
+        <value name="IF57">
+          <block type="logic_compare" id="K)/[TR9ue@7Omp0D2i!;">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="|,Ye|H{,ZOEyJG+lU1s6">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="fqt]!24S}zD$X3S05sC$">
+                <field name="TEXT">リンボーダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO57">
+          <block type="robohon_dance" id="Hndh+g0k1k^R@3.+%tuN">
+            <field name="DANCE">58</field>
+          </block>
+        </statement>
+        <value name="IF58">
+          <block type="logic_compare" id="9|zlmxLD7Z(y;..PGp;$">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="kT%wfh]R!Y%kwCJy~7rU">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="_aVd5,S-XpUP1/oP:?5H">
+                <field name="TEXT">三味線１</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO58">
+          <block type="robohon_dance" id="U|T^VWt,3nmth-q~%o;R">
+            <field name="DANCE">59</field>
+          </block>
+        </statement>
+        <value name="IF59">
+          <block type="logic_compare" id="!w{CFOB]ki0_kuVx^}cU">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="T@,cr77lyH1FA=_MKH/*">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="*Y)jJt4fg-kru?dqY06|">
+                <field name="TEXT">美しく青きドナウ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO59">
+          <block type="robohon_dance" id="^m76qXb%n:AYQf4@[Mr(">
+            <field name="DANCE">60</field>
+          </block>
+        </statement>
+        <value name="IF60">
+          <block type="logic_compare" id="{]QKoP=QXhI`Pa!-W}|Y">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="dtsIIzgq$rPkSeAijjAz">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="aliqywzbFuz!(8}ftY~K">
+                <field name="TEXT">ロボホンマーチ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO60">
+          <block type="robohon_dance" id="mq9vX7kEJ*..Tq2q~Atc">
+            <field name="DANCE">61</field>
+          </block>
+        </statement>
+        <value name="IF61">
+          <block type="logic_compare" id="OF=0NhyGO?@Q7(a$gdt_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="@KPJ7.F%^,GO3wir4J{)">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="S[VF{rnybf|i*1w]jk*h">
+                <field name="TEXT">結婚行進曲</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO61">
+          <block type="robohon_dance" id="tPelS0mI=n(deey`L5-]">
+            <field name="DANCE">62</field>
+          </block>
+        </statement>
+        <value name="IF62">
+          <block type="logic_compare" id=":?RfAkl)-FF7pDZR;EsE">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="M?k|8o~a*9^))b+19/cK">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="_j|nFLf/3hrW$fll8^q(">
+                <field name="TEXT">君が代</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO62">
+          <block type="robohon_dance" id="@[v;Hf-).@pEk:74!@Qq">
+            <field name="DANCE">63</field>
+          </block>
+        </statement>
+        <value name="IF63">
+          <block type="logic_compare" id="oRpXN,sqY6^Y[z5FggNm">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id=":xW`J~ZFrebHiX;SOQd[">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Xto@1T+nkQ-Ct(EHk@z9">
+                <field name="TEXT">アイリッシュダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO63">
+          <block type="robohon_dance" id="tCBiRpoAE7CNgyP,QU~i">
+            <field name="DANCE">64</field>
+          </block>
+        </statement>
+        <value name="IF64">
+          <block type="logic_compare" id="@QnANoxTis5kZKVwW=)p">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="+Di%^xm,`fZ=DOT=XLtK">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="F7}~fPRBj!DVu00`}?;x">
+                <field name="TEXT">ゆりかごの歌</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO64">
+          <block type="robohon_dance" id="N}A6S=/MSi5g|;v}IZC4">
+            <field name="DANCE">65</field>
+          </block>
+        </statement>
+        <value name="IF65">
+          <block type="logic_compare" id="B8^wbXYK}Dz@]xy/C!{B">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="-:)@#z/wQk/`[,+n;1Lo">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="2:`}|-]F=~jzzt0bOr;}">
+                <field name="TEXT">ハロウィン１</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO65">
+          <block type="robohon_dance" id="bWu$5tJBp:Z6xE/G-Y82">
+            <field name="DANCE">66</field>
+          </block>
+        </statement>
+        <value name="IF66">
+          <block type="logic_compare" id="!s0)Qb1G[w[4,j0-VS2T">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="4cQrH1QVMyQY5R):x9U]">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="!:lj8%]mS3T6e`t:g6WL">
+                <field name="TEXT">ボクササイズ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO66">
+          <block type="robohon_dance" id="?aN2Q1Tq8RBM4AK*Og3-">
+            <field name="DANCE">67</field>
+          </block>
+        </statement>
+        <value name="IF67">
+          <block type="logic_compare" id="[+3Vt;,3Zt)=7r=;.:#j">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="}Qr-k~lKkrfR8hQ`/u`G">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="+]!}X8Yv@Q-`2N^$OBd.">
+                <field name="TEXT">アメイジング・グレイス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO67">
+          <block type="robohon_dance" id="s%ME`126Ku9j22FVNeF`">
+            <field name="DANCE">68</field>
+          </block>
+        </statement>
+        <value name="IF68">
+          <block type="logic_compare" id="Ijw58u$,}@y87w=U4r0O">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="J7~x;nf*f|0;khK(3a:9">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="lPs6Ly(O@_?eBPWjs]qj">
+                <field name="TEXT">越天楽</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO68">
+          <block type="robohon_dance" id="AG^B?(c;g@8yAs=Ef|jF">
+            <field name="DANCE">69</field>
+          </block>
+        </statement>
+        <value name="IF69">
+          <block type="logic_compare" id="!$5?Y_sXN%%k(*HLpE}$">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="*2X1-6Uk?%et%`?C@ws,">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="{.yE[xGE`2Zdp0Y:;mhO">
+                <field name="TEXT">スケーターズ・ワルツ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO69">
+          <block type="robohon_dance" id="zx+MBdvUPJG/p{A:])T`">
+            <field name="DANCE">70</field>
+          </block>
+        </statement>
+        <value name="IF70">
+          <block type="logic_compare" id=":MMmrrM{x-4M*NOV3sI)">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="Nt-wLIdUlUJt@feP^Vj(">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="*fL-FtL^HNh#MA0Fp}*v">
+                <field name="TEXT">モンキーダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO70">
+          <block type="robohon_dance" id="nwTLJj2}lbS-@*YRR`@n">
+            <field name="DANCE">71</field>
+          </block>
+        </statement>
+        <value name="IF71">
+          <block type="logic_compare" id=":k8Ujyv-D},4l{[rb2`8">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="l_D7B@.,r^@?;]iNe*:e">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="w5s5j3%Y[5bH*T6$aTNL">
+                <field name="TEXT">春が来た</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO71">
+          <block type="robohon_dance" id="|L=7%adKY_n]YNT,Z4~N">
+            <field name="DANCE">72</field>
+          </block>
+        </statement>
+        <value name="IF72">
+          <block type="logic_compare" id="S(1Dwls^}[9H#XZ5nkVc">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="_ahE8-pdxcFV#lyd@l2L">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="f^;O[QDCg+-g}*Imex*h">
+                <field name="TEXT">ロボホンソング</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO72">
+          <block type="robohon_dance" id="tA8}(/=Uie0PArGo#SLg">
+            <field name="DANCE">73</field>
+          </block>
+        </statement>
+        <value name="IF73">
+          <block type="logic_compare" id="IL2[|`k]K1Vb3djwnFXx">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="uM|LrAh,=K-`{CnRaO%%">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="+G@ON(J1b~4,M_P$#rQY">
+                <field name="TEXT">猫ふんじゃった</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO73">
+          <block type="robohon_dance" id="mmp;z]E7WA?Fru0$rO^|">
+            <field name="DANCE">74</field>
+          </block>
+        </statement>
+        <value name="IF74">
+          <block type="logic_compare" id="c@=$:RW@C6xwG9AW3@2r">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="(8,0bhsst%udJS/W?ZB.">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="e8ly-5buT)-)#0+Gm)=)">
+                <field name="TEXT">ヴォーグダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO74">
+          <block type="robohon_dance" id="AU4djL%waeZFLE|18}F/">
+            <field name="DANCE">75</field>
+          </block>
+        </statement>
+        <value name="IF75">
+          <block type="logic_compare" id="KTu`+fstD^XH)%8j6{(+">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="7;CT33-?1VGP5vk}*3ud">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="JzL{wwS-/?AC#{m([_iC">
+                <field name="TEXT">エイサー</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO75">
+          <block type="robohon_dance" id="x:~-EiP5%wpZwP_wO|4b">
+            <field name="DANCE">76</field>
+          </block>
+        </statement>
+        <value name="IF76">
+          <block type="logic_compare" id="7s0MxJ3)RQwW4O^8EWRs">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="oD/JDGAOE853;QYn2.]w">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="~UE%P9*0m@sPG5lR~H[P">
+                <field name="TEXT">花のワルツ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO76">
+          <block type="robohon_dance" id="*f#H|%vj7otj;HP|~YSJ">
+            <field name="DANCE">77</field>
+          </block>
+        </statement>
+        <value name="IF77">
+          <block type="logic_compare" id="|L8Uj.w*:Gf|Dq$~^OMD">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="$KD5!1u4n^oI,1kM##4U">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Lw8:/-O^3DW3R)=Hy3Yc">
+                <field name="TEXT">ハロウィン２</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO77">
+          <block type="robohon_dance" id="3q43c{!cQxSd}98f`d_)">
+            <field name="DANCE">78</field>
+          </block>
+        </statement>
+        <value name="IF78">
+          <block type="logic_compare" id="LZm8bQ_fPQIdek-zUF5e">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="qe0mU9T6aR1]*tjcf@Y7">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="18HAbD}`PvlaI=.QVyU+">
+                <field name="TEXT">三味線２</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO78">
+          <block type="robohon_dance" id="po42dV(/BbP?7Or2I@nf">
+            <field name="DANCE">79</field>
+          </block>
+        </statement>
+        <value name="IF79">
+          <block type="logic_compare" id="^@#%{f)xRZYwE3Nxy8+W">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="0JFhRmpM/9G-^jfS*s/D">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="FEL`u[_cf8yPPRJK*cW$">
+                <field name="TEXT">アヴェマリア</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO79">
+          <block type="robohon_dance" id="=yRi2hxaqeI.c3P{E4Wm">
+            <field name="DANCE">80</field>
+          </block>
+        </statement>
+        <value name="IF80">
+          <block type="logic_compare" id="yXhi6aR1!}NBWe%91v:0">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="/)@wA)f_+T-,itf{}auM">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="qHlQvXLz`v?P;ag:h3[@">
+                <field name="TEXT">ロボホンのお正月</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO80">
+          <block type="robohon_dance" id="R!;.Sn),2YNS|`WSX$xp">
+            <field name="DANCE">81</field>
+          </block>
+        </statement>
+        <value name="IF81">
+          <block type="logic_compare" id="h?:Zs@oX-l-Y6=5J%Msx">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="voR7%9/=e-GvX_C,};^@">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="M?+WWE1kHtGz$J]YN|-K">
+                <field name="TEXT">巨大ロボホンのダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO81">
+          <block type="robohon_dance" id=").PcfGd*P91PJcigE|kk">
+            <field name="DANCE">82</field>
+          </block>
+        </statement>
+        <value name="IF82">
+          <block type="logic_compare" id="+*c?K=4epJ.o:e+Ll:c}">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="xe,*2FgR/W=TN)[h`F}L">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="uG)-Fc;AOXhhTvYCWO-m">
+                <field name="TEXT">仰げば尊し</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO82">
+          <block type="robohon_dance" id=";mrPOHB{O,J?K5ptU:D0">
+            <field name="DANCE">83</field>
+          </block>
+        </statement>
+        <value name="IF83">
+          <block type="logic_compare" id="gi$yT9LJ,_5vKRRL!;Ko">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="[Ft+xi,.Lt]`T:n,}eyd">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="Zm$%LXgCLOWt[zm9*9rl">
+                <field name="TEXT">チャチャチャ</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO83">
+          <block type="robohon_dance" id="[2l;ss^(=sqrK(C#:g`.">
+            <field name="DANCE">84</field>
+          </block>
+        </statement>
+        <value name="IF84">
+          <block type="logic_compare" id="VJ/h^B)8a+*(D!s]QG|E">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="3@r|$Ou}K,q[9LzP}1Y*">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=".M?f+zdr|f|0,[;R^a07">
+                <field name="TEXT">おさんぽのうた</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO84">
+          <block type="robohon_dance" id="cEta3+Ew=ceq,pjC@{km">
+            <field name="DANCE">85</field>
+          </block>
+        </statement>
+        <value name="IF85">
+          <block type="logic_compare" id="z4S_^^v+;h4Cg/Et_DyO">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="w%;aQ0R;rcWwUkk7ikY$">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="HVH+]znrJ{(N,PnUK/G#">
+                <field name="TEXT">オクラホマミキサー</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO85">
+          <block type="robohon_dance" id="cH*bViZ^eDL*q@3]TuD3">
+            <field name="DANCE">86</field>
+          </block>
+        </statement>
+        <value name="IF86">
+          <block type="logic_compare" id="Bus%TsexkCkOQoz|;NEq">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="}{([z058!!HY;k=LMESi">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="jgXndSjsV|`Tu(l6,8sh">
+                <field name="TEXT">オルゴールのダンス</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO86">
+          <block type="robohon_dance" id="Xl.[o-#i}DhU9rPwE/oS">
+            <field name="DANCE">87</field>
+          </block>
+        </statement>
+        <value name="IF87">
+          <block type="logic_compare" id="/Ut:7,1k9uXNCtnW4IB/">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="R?3?.DcfOQoT=!bXJrOn">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="jFbJjcPd}%Lq.4YNX632">
+                <field name="TEXT">ロボホン踊り唄</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO87">
+          <block type="robohon_dance" id="97B9:sv.SIpuHR3yz-*4">
+            <field name="DANCE">88</field>
+          </block>
+        </statement>
+        <value name="IF88">
+          <block type="logic_compare" id="2R?+09QA:Q*%Nowu=5q[">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="pk!`7qbeITNj;;Jo?Q`?">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="213a$/fDzNq]yI^;u^]G">
+                <field name="TEXT">ロボホン賛歌</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO88">
+          <block type="robohon_dance" id="@A6r.{~fx=z6N@-{)qA6">
+            <field name="DANCE">89</field>
+          </block>
+        </statement>
+        <value name="IF89">
+          <block type="logic_compare" id="H7==EWCLjqi8Ik]G#:sw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="~nwK42$;-Z0CL]W5_Hw^">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="imGljK.0Z|u!yiQXdy;q">
+                <field name="TEXT">ハロウィン３</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO89">
+          <block type="robohon_dance" id=".q(X#C4Cw7{KMs{4_p,R">
+            <field name="DANCE">90</field>
+          </block>
+        </statement>
+        <value name="IF90">
+          <block type="logic_compare" id="vzE(lh(6~98-vzSdt:35">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="00=HEUblYfh0g)}AD9SV">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="bh%Aev@2;otEMGQo+[?.">
+                <field name="TEXT">トルコ行進曲</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO90">
+          <block type="robohon_dance" id="|[.oD!no6PvU}],2!Yo+">
+            <field name="DANCE">91</field>
+          </block>
+        </statement>
+        <value name="IF91">
+          <block type="logic_compare" id="[]t5$:u@W,q!2}+rR].6">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="ZLXQe|hH#Q;LlnfxwZJd">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id=";27.._NiA~..a%IPeU5;">
+                <field name="TEXT">The first NOEL</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO91">
+          <block type="robohon_dance" id="UIrt+N*0yy8XO?J5gexN">
+            <field name="DANCE">92</field>
+          </block>
+        </statement>
+        <value name="IF92">
+          <block type="logic_compare" id="Gm%}Nm5bvf4!bW;gt5,_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="kzIB0^Y]yh}w`Hp+/FGS">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="L(4zL%E4Ix),kR^9l!Wf">
+                <field name="TEXT">シャープ戦隊ロボレンジャー</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO92">
+          <block type="robohon_dance" id="1JUd2n2Wle#~OqAJM0Wv">
+            <field name="DANCE">93</field>
+          </block>
+        </statement>
+        <value name="IF93">
+          <block type="logic_compare" id="U{2s[3l?`98jgthHTDWx">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="f*!slF^D:9p~WL^/ze.b">
+                <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="u0z7@hdf.0CcRj_aF/vW">
+                <field name="TEXT">ランダム</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO93">
+          <block type="robohon_dance" id="QM:.FOAZM5bP{s*X[yQ.">
+            <field name="DANCE">ランダム</field>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="robohon_speak" id="imbvu9MROBvR%/coR.bf">
+            <value name="WORD">
+              <shadow type="text" id="iR-]ZLDN/8+N2avCag#t">
+                <field name="TEXT">こんにちは</field>
+              </shadow>
+              <block type="text_join" id="OQ-,-{cok-9FfLSwDYx/">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="variables_get" id="pXi{?Yzs-/zeYt76D2pB">
+                    <field name="VAR" id="vbh#)5l,e.*Yo;$z}q{@" variabletype="">_ダンス名</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="KdFU{UUU#@0I8%vXR%g?">
+                    <field name="TEXT">というダンスは覚えてないよ</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -26,7 +26,7 @@
 
 ![ルーレット体操のプログラム](/images/%E3%83%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E4%BD%93%E6%93%8D.png)
 
-[ルーレット体操.xml](https://github.com/3110/robrick-convenience-functions/raw/main/%E3%83%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E4%BD%93%E6%93%8D.xml)（リンクを右クリックして「名前を付けてリンク先を保存」）
+[ルーレット体操.xml](https://github.com/3110/robrick-convenience-functions/raw/main/samples/%E3%83%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E4%BD%93%E6%93%8D.xml)（リンクを右クリックして「名前を付けてリンク先を保存」）
 
 「指定したダンスを踊る」ブロックのサンプルとして，特定のダンスの中からランダムに踊るプログラムを紹介します。
 

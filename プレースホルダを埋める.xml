@@ -16,7 +16,7 @@
       <arg name="_値のリスト" varid="-wjJ$u#j2NaQ,$l6;%{f"></arg>
       <arg name="_接頭辞" varid="(jZPqH;s)d@M^x_%G5-l"></arg>
     </mutation>
-    <field name="NAME">プレースフォルダを埋める</field>
+    <field name="NAME">プレースホルダを埋める</field>
     <comment pinned="false" h="80" w="160">この関数の説明…</comment>
     <statement name="STACK">
       <block type="variables_set" id="qWw|gbH]h$CPnRJVy-NC">

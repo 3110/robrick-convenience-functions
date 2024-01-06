@@ -12,7 +12,7 @@
 
 ### 「指定したダンスを踊る」ブロック
 
-<a href="https://github.com/3110/robrick-convenience-functions/blob/main/images/%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%80%E3%83%B3%E3%82%B9%E3%82%92%E8%B8%8A%E3%82%8B.png"><img src="https://github.com/3110/robrick-convenience-functions//main/images/%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%80%E3%83%B3%E3%82%B9%E3%82%92%E8%B8%8A%E3%82%8B.png" height="350px"></a>
+<a href="https://github.com/3110/robrick-convenience-functions/blob/main/images/%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%80%E3%83%B3%E3%82%B9%E3%82%92%E8%B8%8A%E3%82%8B.png"><img src="https://github.com/3110/robrick-convenience-functions/raw/main/images/%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%80%E3%83%B3%E3%82%B9%E3%82%92%E8%B8%8A%E3%82%8B.png" height="350px"></a>
 
 [指定したダンスを踊る.xml](https://github.com/3110/robrick-convenience-functions/raw/main/%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%80%E3%83%B3%E3%82%B9%E3%82%92%E8%B8%8A%E3%82%8B.xml)（リンクを右クリックして「名前を付けてリンク先を保存」）
 

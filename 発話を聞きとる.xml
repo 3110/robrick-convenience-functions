@@ -1,0 +1,122 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="?towV:Rd1^CqbZs?+tA#">_話しかける言葉</variable>
+    <variable type="" id="A6(bog7G_QvTiNs_WtLt">_聞きとる言葉一覧</variable>
+    <variable type="" id="S-oSEDibX4Loz_$L{2ay">_聞き返す言葉一覧</variable>
+    <variable type="" id="a$3UM$r9D19W?+8q#%i@">_聞き返す言葉</variable>
+  </variables>
+  <block type="procedures_defreturn" id="DMJzL[+YO#s?[XgwLJ*V" x="1663" y="162">
+    <mutation>
+      <arg name="_話しかける言葉" varid="?towV:Rd1^CqbZs?+tA#"></arg>
+      <arg name="_聞きとる言葉一覧" varid="A6(bog7G_QvTiNs_WtLt"></arg>
+      <arg name="_聞き返す言葉一覧" varid="S-oSEDibX4Loz_$L{2ay"></arg>
+    </mutation>
+    <field name="NAME">発話を聞きとる</field>
+    <comment pinned="false" h="80" w="160">この関数の説明…</comment>
+    <statement name="STACK">
+      <block type="robohon_speak" id="n*a%|I5Kl/X/5,2T6fqL">
+        <value name="WORD">
+          <shadow type="text" id="zwYB|k-]rP5H^z1Ow-_n">
+            <field name="TEXT">こんにちは</field>
+          </shadow>
+          <block type="variables_get" id="tJsE+`^kVftsd;40#p;t">
+            <field name="VAR" id="?towV:Rd1^CqbZs?+tA#" variabletype="">_話しかける言葉</field>
+          </block>
+        </value>
+        <next>
+          <block type="robohon_listenwaitany" id="qAk^bl4|xT?DW3r=khD}">
+            <next>
+              <block type="procedures_ifreturn" id="|-{J:XjEVttni+KQbAFr">
+                <mutation value="1"></mutation>
+                <value name="CONDITION">
+                  <block type="dict_in" id="j*A|RvMMb+m`P}v06T9e">
+                    <value name="DICT">
+                      <block type="variables_get" id="s}JA/UruY9h.!ZdFa{[)">
+                        <field name="VAR" id="A6(bog7G_QvTiNs_WtLt" variabletype="">_聞きとる言葉一覧</field>
+                      </block>
+                    </value>
+                    <value name="KEY">
+                      <block type="robohon_lastlistenword" id=",+ts+keRo5go=[3q9.Cd"></block>
+                    </value>
+                  </block>
+                </value>
+                <value name="VALUE">
+                  <block type="dict_get" id="+JN7`RBZPaLd;yt=fwoB">
+                    <value name="DICT">
+                      <block type="variables_get" id="TQb+_o?.6r[+~O6,B4x?">
+                        <field name="VAR" id="A6(bog7G_QvTiNs_WtLt" variabletype="">_聞きとる言葉一覧</field>
+                      </block>
+                    </value>
+                    <value name="KEY">
+                      <block type="robohon_lastlistenword" id="QwrK~I[C4Vfi?4TyafGG"></block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_forEach" id="*f+V^aVs[%Mfq5=Cg;qY">
+                    <field name="VAR" id="a$3UM$r9D19W?+8q#%i@" variabletype="">_聞き返す言葉</field>
+                    <value name="LIST">
+                      <block type="variables_get" id="C3n-sC;i^{h(9j[OVxB`">
+                        <field name="VAR" id="S-oSEDibX4Loz_$L{2ay" variabletype="">_聞き返す言葉一覧</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="robohon_speak" id="1]zXB7+K7b`hAo36$d1E">
+                        <value name="WORD">
+                          <shadow type="text" id="PwFPB]$%GdK*m@ql:y%_">
+                            <field name="TEXT">こんにちは</field>
+                          </shadow>
+                          <block type="variables_get" id="$tuB=w`c9Lvj$Lr8PPzC">
+                            <field name="VAR" id="a$3UM$r9D19W?+8q#%i@" variabletype="">_聞き返す言葉</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="robohon_listenwaitany" id=":4|CDs-{fFDc1*:y}7HP">
+                            <next>
+                              <block type="procedures_ifreturn" id="ljKr,f83AN2:LHfLl$Kq">
+                                <mutation value="1"></mutation>
+                                <value name="CONDITION">
+                                  <block type="dict_in" id="X~{;i18LvzljONO^+7~b">
+                                    <value name="DICT">
+                                      <block type="variables_get" id="A??c/_t9.K*?G`GX(hZi">
+                                        <field name="VAR" id="A6(bog7G_QvTiNs_WtLt" variabletype="">_聞きとる言葉一覧</field>
+                                      </block>
+                                    </value>
+                                    <value name="KEY">
+                                      <block type="robohon_lastlistenword" id="7Ly_o7l0vgpxZ1tgaB,0"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="VALUE">
+                                  <block type="dict_get" id="UYn8N6{Ke(ZSMRQHLxF2">
+                                    <value name="DICT">
+                                      <block type="variables_get" id="Ey0ZE;aM.$KaqF.+k^:v">
+                                        <field name="VAR" id="A6(bog7G_QvTiNs_WtLt" variabletype="">_聞きとる言葉一覧</field>
+                                      </block>
+                                    </value>
+                                    <value name="KEY">
+                                      <block type="robohon_lastlistenword" id="-kOVqWHb/EQ`-~N}$kI2"></block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="text" id="mH9X#_BGCKb9c*/vqlj0">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+</xml>

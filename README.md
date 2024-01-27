@@ -143,5 +143,6 @@ A. 上のQでも説明しましたが，ロブリックでは変数の有効範�
 
 ## 参考
 
+* [ロブリック](https://robohon.com/apps/robrick.php)（シャープ株式会社）
 * [ロボホン用プログラミングツール ロブリック SR-SA04 利用マニュアル Version 1.4.0](https://robohon.com/apps/robrick/robrick-manual_v1-4-0.pdf)（シャープ株式会社）
 * [ロボホン工房：ロブリックの部屋](https://robotomo.robohon.com/menus/gehvibwgpu4dg0bv/announcements)（[ロボホンともだち広場](https://robotomo.robohon.com/)）

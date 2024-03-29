@@ -1,98 +1,87 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
-    <variable type="" id="@%!a5A1g$*(UN[4PT@~M">_メッセージ</variable>
-    <variable type="" id="UG))NuqF`4_p4^jT*I=i">_トークン</variable>
-    <variable type="" id="2HfLAFtw#zFcE!TZV~#W">_エンドポイント</variable>
-    <variable type="" id="!-Oai6(zht7GV,7KSfLu">_応答</variable>
-    <variable type="" id="i4rO;|k4zRO]2W_m=yV:">_状態</variable>
-    <variable type="" id="R*{V}E4.gaa%:pipZRLH">__トークン</variable>
+    <variable type="" id="~Q36@hkd/H$;o4e,15qF">_メッセージ</variable>
+    <variable type="" id="ooSiN#:|RL?hPKW=}I@D">_トークン</variable>
+    <variable type="" id="GgI;RgK7F].p_@.W/ADr">_エンドポイント</variable>
+    <variable type="" id="HEez*~#kY)Lx/m=.jC|w">_応答</variable>
+    <variable type="" id="S6oyBuL51]SWxN-T9YDg">_状態</variable>
   </variables>
   <block type="procedures_defnoreturn" id="(!{%K!pY]A,aDJR_$v~9" x="-462" y="212">
     <mutation>
-      <arg name="_メッセージ" varid="@%!a5A1g$*(UN[4PT@~M"></arg>
-      <arg name="_トークン" varid="UG))NuqF`4_p4^jT*I=i"></arg>
-      <arg name="_エンドポイント" varid="2HfLAFtw#zFcE!TZV~#W"></arg>
+      <arg name="_メッセージ" varid="~Q36@hkd/H$;o4e,15qF"></arg>
+      <arg name="_トークン" varid="ooSiN#:|RL?hPKW=}I@D"></arg>
+      <arg name="_エンドポイント" varid="GgI;RgK7F].p_@.W/ADr"></arg>
     </mutation>
     <field name="NAME">LINEに通知を送る</field>
-    <comment pinned="false" h="80" w="160">この関数の説明…</comment>
+    <comment pinned="false" h="80" w="160">指定したLINE Notifyエンドポイントとアクセストークンを使用してメッセージを通知します。</comment>
     <statement name="STACK">
       <block type="variables_set" id="=70~H${43DkoRoKOsx[)">
-        <field name="VAR" id="!-Oai6(zht7GV,7KSfLu" variabletype="">_応答</field>
+        <field name="VAR" id="HEez*~#kY)Lx/m=.jC|w" variabletype="">_応答</field>
         <comment pinned="false" h="88" w="208">本来はこのように書きたいが，WebAPIブロックのバグのため動かない</comment>
         <value name="VALUE">
-          <block type="dict_create" id="{U]T]tMsX%)oCQHZ[[p-">
-            <value name="VALUE">
-              <shadow type="text" id="eXM1jM3(}APDR?k;wIp(">
-                <field name="TEXT">{}</field>
+          <block type="robohon_webapi_base_new" id=":wqiFr*[0Njw)#dyAblF">
+            <mutation items="2" method="POST"></mutation>
+            <field name="METHOD">POST</field>
+            <value name="URL">
+              <shadow type="text" id="nZeQCA#*4E8_Bb;6]UX6">
+                <field name="TEXT">https://</field>
               </shadow>
-              <block type="robohon_webapi_base" id="O4xV(7RKQvm^E=%Us3Sa">
-                <mutation items="2"></mutation>
-                <field name="METHOD">POST</field>
-                <value name="URL">
-                  <shadow type="text" id="lb4:vjqfK#^gECpiBppd">
+              <block type="variables_get" id="p.K(jh-r_C~J?go1.,wu">
+                <field name="VAR" id="GgI;RgK7F].p_@.W/ADr" variabletype="">_エンドポイント</field>
+              </block>
+            </value>
+            <value name="HEADER0">
+              <block type="robohon_webapi_header" id="Hj;YMd}vVV!PXnAXDUiK">
+                <value name="HEADER_NAME">
+                  <shadow type="text" id="JC*^nij?H@:w)3O~;vSU">
+                    <field name="TEXT">Authorization</field>
+                  </shadow>
+                </value>
+                <value name="HEADER_VALUE">
+                  <shadow type="text" id="JZiFvGPMM{]N)1?{:`}M">
                     <field name="TEXT"></field>
                   </shadow>
-                  <block type="variables_get" id="p_llHGez@|zw%`GCv{tZ">
-                    <field name="VAR" id="2HfLAFtw#zFcE!TZV~#W" variabletype="">_エンドポイント</field>
-                  </block>
-                </value>
-                <value name="HEADER0">
-                  <block type="robohon_webapi_header" id="w{/;Wc6]7jIK;!lV+bAO">
-                    <value name="HEADER_NAME">
-                      <shadow type="text" id="Ll59PkIVw{MNWrBq|/H5">
-                        <field name="TEXT">Authorization</field>
-                      </shadow>
-                    </value>
-                    <value name="HEADER_VALUE">
-                      <shadow type="text" id="Q8m{|G_BfY+]AbN3u*T-">
-                        <field name="TEXT"></field>
-                      </shadow>
-                      <block type="text_join" id=",$/_-E27N%W|I-.~g3k9">
-                        <mutation items="2"></mutation>
-                        <value name="ADD0">
-                          <block type="text" id="cG=)-{Kl|uc_edz`WrR7">
-                            <field name="TEXT">Bearer </field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="variables_get" id="w]?oy4ttu{J(bmqkqhDH">
-                            <field name="VAR" id="R*{V}E4.gaa%:pipZRLH" variabletype="">__トークン</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="HEADER1">
-                  <block type="robohon_webapi_header" id="gv@Y.rC@Y(WqaC$dwZ;W">
-                    <value name="HEADER_NAME">
-                      <shadow type="text" id="x#~/gbpoN$KTj1ufPw(l">
-                        <field name="TEXT">Content-Type</field>
-                      </shadow>
-                    </value>
-                    <value name="HEADER_VALUE">
-                      <shadow type="text" id="a.1KII{usAETOYq,M(j~">
-                        <field name="TEXT">application/x-www-form-urlencoded</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <value name="WEBAPI_BODY">
-                  <shadow type="text" id="w?gGAy?`1CsPVFUJ]4MN">
-                    <field name="TEXT"></field>
-                  </shadow>
-                  <block type="text_join" id="~JR8H`xLe9nUajLfYIR9">
+                  <block type="text_join" id="|)tzoY%(LZ7M./~[}XPg">
                     <mutation items="2"></mutation>
                     <value name="ADD0">
-                      <block type="text" id="[IqgFm,B#P8rHUB59sk+">
-                        <field name="TEXT">message=</field>
+                      <block type="text" id="QP+uT~`#4]0aCLnT,!`S">
+                        <field name="TEXT">Bearer </field>
                       </block>
                     </value>
                     <value name="ADD1">
-                      <block type="variables_get" id="TOi?Z^1gL-:2u!GD4qi#">
-                        <field name="VAR" id="@%!a5A1g$*(UN[4PT@~M" variabletype="">_メッセージ</field>
+                      <block type="variables_get" id="a_74yP1=fRs2,~?~14$}">
+                        <field name="VAR" id="ooSiN#:|RL?hPKW=}I@D" variabletype="">_トークン</field>
                       </block>
                     </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="HEADER1">
+              <block type="robohon_webapi_header" id="%^/X3ui_Yw*VP:OXCZYM">
+                <value name="HEADER_NAME">
+                  <shadow type="text" id="N7/wLikm4XMde]=%z!6F">
+                    <field name="TEXT">Content-Type</field>
+                  </shadow>
+                </value>
+                <value name="HEADER_VALUE">
+                  <shadow type="text" id="r1fdAJ@[3u~p9,S`KO[[">
+                    <field name="TEXT">application/x-www-form-urlencoded</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="WEBAPI_BODY">
+              <block type="text_join" id="j=EQ5BOmwjiH[Z:8EOvK">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="pHQ3aXv!v@qg7gBD#{:l">
+                    <field name="TEXT">message=</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="GBg?!N6Tb$pCnk/Li)3F">
+                    <field name="VAR" id="~Q36@hkd/H$;o4e,15qF" variabletype="">_メッセージ</field>
                   </block>
                 </value>
               </block>
@@ -101,12 +90,19 @@
         </value>
         <next>
           <block type="variables_set" id="/m$BvgLAJh;dR_$lsSo8">
-            <field name="VAR" id="i4rO;|k4zRO]2W_m=yV:" variabletype="">_状態</field>
+            <field name="VAR" id="S6oyBuL51]SWxN-T9YDg" variabletype="">_状態</field>
             <value name="VALUE">
               <block type="dict_get" id="XV3~s8N^18gtjS3I(FJX">
                 <value name="DICT">
-                  <block type="variables_get" id="s90TSFVm(.v/$NdBdiV$">
-                    <field name="VAR" id="!-Oai6(zht7GV,7KSfLu" variabletype="">_応答</field>
+                  <block type="dict_create" id="{U]T]tMsX%)oCQHZ[[p-">
+                    <value name="VALUE">
+                      <shadow type="text" id="eXM1jM3(}APDR?k;wIp(">
+                        <field name="TEXT">{}</field>
+                      </shadow>
+                      <block type="variables_get" id="s90TSFVm(.v/$NdBdiV$">
+                        <field name="VAR" id="HEez*~#kY)Lx/m=.jC|w" variabletype="">_応答</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <value name="KEY">
@@ -124,7 +120,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="7e:Z9)t+:sK9DS}x6uX*">
-                        <field name="VAR" id="i4rO;|k4zRO]2W_m=yV:" variabletype="">_状態</field>
+                        <field name="VAR" id="S6oyBuL51]SWxN-T9YDg" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -148,7 +144,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="AG|3u?sq7O^Zh62?aj|I">
-                        <field name="VAR" id="i4rO;|k4zRO]2W_m=yV:" variabletype="">_状態</field>
+                        <field name="VAR" id="S6oyBuL51]SWxN-T9YDg" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -172,7 +168,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="GCQ={skQ,i~z5F!Qc|Ff">
-                        <field name="VAR" id="i4rO;|k4zRO]2W_m=yV:" variabletype="">_状態</field>
+                        <field name="VAR" id="S6oyBuL51]SWxN-T9YDg" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -196,7 +192,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="lWiU7M,Buli%(M$/-B1,">
-                        <field name="VAR" id="i4rO;|k4zRO]2W_m=yV:" variabletype="">_状態</field>
+                        <field name="VAR" id="S6oyBuL51]SWxN-T9YDg" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">

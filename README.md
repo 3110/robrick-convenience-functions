@@ -104,19 +104,21 @@
 
 ## 7. 「LINEに通知を送る」ブロック
 
-![「LINEに通知を送る」ブロック（バグ回避版）](/images/LINE%E3%81%AB%E9%80%9A%E7%9F%A5%E3%82%92%E9%80%81%E3%82%8B%EF%BC%88%E3%83%90%E3%82%B0%E5%9B%9E%E9%81%BF%E7%89%88%EF%BC%89.png)
+![「LINEに通知を送る」ブロック](/images/LINEに通知を送る.png)
 
-[LINEに通知を送る（バグ回避版）.xml](https://github.com/3110/robrick-convenience-functions/raw/main/LINE%E3%81%AB%E9%80%9A%E7%9F%A5%E3%82%92%E9%80%81%E3%82%8B%EF%BC%88%E3%83%90%E3%82%B0%E5%9B%9E%E9%81%BF%E7%89%88%EF%BC%89.xml)
+[LINEに通知を送る.xml](https://github.com/3110/robrick-convenience-functions/raw/main/LINE%E3%81%AB%E9%80%9A%E7%9F%A5%E3%82%92%E9%80%81%E3%82%8B.xml)
 
 [](/images/LINE%E3%81%AB%E9%80%9A%E7%9F%A5%E3%82%92%E9%80%81%E3%82%8B.png)
 
-※ロブリックv2.10.0のWebAPIブロックにはバグがあり，引数のURLやHeadersに変数を渡せないので，このバグ回避版のブロックではテキストブロックで直接渡しています。バグが修正され次第，[LINEに通知を送る.xml](https://github.com/3110/robrick-convenience-functions/raw/main/LINE%E3%81%AB%E9%80%9A%E7%9F%A5%E3%82%92%E9%80%81%E3%82%8B.xml)に差し替えます。
+※2024年3月28日にリリースされたロブリックv2.13.0で使用してください。それ以前のWebAPIブロックにはバグがあり，引数のURLやHeadersに変数を渡せません。
 
-[LINE Notify API](https://notify-bot.line.me/doc/ja/)を使ってLINEに通知を送るブロックです。LINE Notifyのパーソナル・アクセス・トークンの発行が必要です。発行したパーソナル・アクセス・トークンを「\[アクセストークンに書き換える\]」のところに入れてください。
+[LINE Notify API](https://notify-bot.line.me/doc/ja/)を使ってLINEに通知を送るブロックです。使用するにはLINE Notifyのパーソナル・アクセス・トークン（英数字45文字）の発行が必要です。[LINE Notifyのマイページ](https://notify-bot.line.me/my/)でパーソナル・アクセス・トークンを発行してください。
 
 ### サンプル：ロボホンに話した内容をLINEに送る
 
 ![ロボホンに話した内容をLINEに送る](/images/%E3%83%AD%E3%83%9C%E3%83%9B%E3%83%B3%E3%81%AB%E8%A9%B1%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92LINE%E3%81%AB%E9%80%81%E3%82%8B.png)
+
+※発行したパーソナル・アクセス・トークンを変数「LINE Notifyアクセストークン」に文字列（\[アクセストークンに書き換える\]と書かれたところ）として入れてください。
 
 待ち受け起動のスクリプトになっているので，「LINE送って」と話しかけると起動します。ロボホンがLINEに送る内容を聞いてくれますので，送りたい内容を話しかけてください。話し終わるとロボホンが聞きとった内容を教えてくれるので，送ってよければ「いいよ」，送るのをやめる場合は「だめだよ」と言ってあげましょう。「いいよ」と言うとLINEに話した内容を送ってくれます。
 

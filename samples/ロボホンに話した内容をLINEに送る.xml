@@ -1,20 +1,24 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
-    <variable type="" id="hNgow2kbO4Peie3Ng)g4">_話しかける言葉</variable>
-    <variable type="" id="%s%cq(maP//?RVbXN~OH">_聞きとる言葉一覧</variable>
-    <variable type="" id="?_5m5T3I3K0@--i}:^*_">_聞き返す言葉一覧</variable>
-    <variable type="" id="kC.yA=6RUr4?5q!H}6C0">_キーのリスト</variable>
-    <variable type="" id="0OZ=[iau@)E{UAZ7{=mS">_値のリスト</variable>
-    <variable type="" id="pBV#2rzh}]+d@3WkLM^r">_メッセージ</variable>
-    <variable type="" id="VdjaWe_MniD)bl,2|^no">_キーのリストの長さ</variable>
-    <variable type="" id="]ty[Kex?cpVULP[2^.?z">_連想配列</variable>
-    <variable type="" id="48o@b4IWMFH?)2s{6oY.">_応答</variable>
-    <variable type="" id="n[6Q7(Ww36cF]frsW#)F">_値のリストの長さ</variable>
-    <variable type="" id="Y),/[@qP$ZWU)cS+tOkC">_状態</variable>
-    <variable type="" id="$FWq{[o;TiPZl*A)X$AQ">送る内容</variable>
-    <variable type="" id="jU;,.39)tyAM)d,CQGM1">_聞き返す言葉</variable>
-    <variable type="" id="sC.zi-5G*-6AW^XxLY~a">_リストの長さ</variable>
-    <variable type="" id="y+6RI5R+IB~YdAbxQ;aH">_インデックス</variable>
+    <variable type="" id="tc{_4ib*/%QO6w9;s?4X">_話しかける言葉</variable>
+    <variable type="" id="0J.C@sBy^-:^Tf($}I|F">_聞きとる言葉一覧</variable>
+    <variable type="" id="W^oz;IGhXL0bY8gP1D}Y">_聞き返す言葉一覧</variable>
+    <variable type="" id="pf99tbF-ph5^_SWxVS.u">_キーのリスト</variable>
+    <variable type="" id="Ij@7O|b:HB9=|Ib1^`d:">_値のリスト</variable>
+    <variable type="" id="uZ?/E;SNL_t,0A-BMpiW">_メッセージ</variable>
+    <variable type="" id="GkE~Mj`^tra_K?lhh(mw">_トークン</variable>
+    <variable type="" id="s]!6^_AT-$-+QQu|{QA0">_エンドポイント</variable>
+    <variable type="" id="RK8u|3.*mnCQMh|6_~^u">LNIE Notifyアクセストークン</variable>
+    <variable type="" id="w+s[S}vL3JNf=rH4-3r1">_キーのリストの長さ</variable>
+    <variable type="" id="7iZ#ZE6H!fKVNEb=ec-f">_連想配列</variable>
+    <variable type="" id="L5/f^z/ef%3Sw%=[h.cl">_応答</variable>
+    <variable type="" id="zRgOSZIZ,y]D[BV*roMg">LINE Notofyエンドポイント</variable>
+    <variable type="" id="E9@f;%sP@`YnFNn5|7mk">_値のリストの長さ</variable>
+    <variable type="" id="Rpmb9npmV}F`OE=JDZ18">_状態</variable>
+    <variable type="" id="U/oSV!6F-8)T`8WI|e|+">_聞き返す言葉</variable>
+    <variable type="" id="(:xg[|:(4f9fMg]U@kf4">_リストの長さ</variable>
+    <variable type="" id="?Xp/]@!8i*P$pakDcVI8">送る内容</variable>
+    <variable type="" id="YutiEGlYA[a(H6b.=U*X">_インデックス</variable>
   </variables>
   <block type="robohon_listenStart" id="Ce}l+nK5TGVDsr6!%t|f" x="-88" y="62">
     <value name="KEYWORD">
@@ -23,136 +27,169 @@
       </shadow>
     </value>
     <next>
-      <block type="robohon_speak" id="5.JpF@rZ^R#nh}aMNY4F">
-        <value name="WORD">
-          <shadow type="text" id="k1yi@Q8NFgwzex_!;Bgx">
-            <field name="TEXT">オッケー。送る内容を教えてね。</field>
-          </shadow>
+      <block type="variables_set" id="phFERl)Pem/@RO}mP=hb">
+        <field name="VAR" id="RK8u|3.*mnCQMh|6_~^u" variabletype="">LNIE Notifyアクセストークン</field>
+        <value name="VALUE">
+          <block type="text" id="RULXyLurJok13H5ow#-C">
+            <field name="TEXT">[アクセストークンに書き換える]</field>
+            <comment pinned="true" h="80" w="160">ユーザ・グループに関連付けられたアクセストークンに書き換えてください</comment>
+          </block>
         </value>
         <next>
-          <block type="robohon_listenwaitany" id="BDZKpVtul+S7beaIXI+x">
+          <block type="variables_set" id="E7Z=S#.oBMPgl1Eg.MpX">
+            <field name="VAR" id="zRgOSZIZ,y]D[BV*roMg" variabletype="">LINE Notofyエンドポイント</field>
+            <value name="VALUE">
+              <block type="text" id="2Q#bYd}ilDd}ph.MR21,">
+                <field name="TEXT">https://notify-api.line.me/api/notify</field>
+              </block>
+            </value>
             <next>
-              <block type="variables_set" id="HXU/NH6`KM6)ut`u%F2g">
-                <field name="VAR" id="$FWq{[o;TiPZl*A)X$AQ" variabletype="">送る内容</field>
-                <value name="VALUE">
-                  <block type="robohon_lastlistenword" id="oL2~;2FE75%hZjBRiI1."></block>
+              <block type="robohon_speak" id="5.JpF@rZ^R#nh}aMNY4F">
+                <value name="WORD">
+                  <shadow type="text" id="k1yi@Q8NFgwzex_!;Bgx">
+                    <field name="TEXT">オッケー。送る内容を教えてね。</field>
+                  </shadow>
                 </value>
                 <next>
-                  <block type="controls_if" id="~(?X/Z)7jEYA;6V06d)K">
-                    <mutation else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_compare" id="($jBsY6hRzpYW`CzeRn(">
-                        <field name="OP">EQ</field>
-                        <value name="A">
-                          <block type="procedures_callreturn" id="KWz-8q$s:;bx_W#$kJ@-">
-                            <mutation name="発話を聞きとる">
-                              <arg name="_話しかける言葉"></arg>
-                              <arg name="_聞きとる言葉一覧"></arg>
-                              <arg name="_聞き返す言葉一覧"></arg>
-                            </mutation>
-                            <value name="ARG0">
-                              <block type="text_join" id="4|HHy[iu{s+Yd1,daq,R">
-                                <mutation items="4"></mutation>
-                                <value name="ADD0">
-                                  <block type="text" id="cvS|qXb;nI)qsAOH23/p">
-                                    <field name="TEXT">「</field>
+                  <block type="robohon_listenwaitany" id="BDZKpVtul+S7beaIXI+x">
+                    <next>
+                      <block type="variables_set" id="HXU/NH6`KM6)ut`u%F2g">
+                        <field name="VAR" id="?Xp/]@!8i*P$pakDcVI8" variabletype="">送る内容</field>
+                        <value name="VALUE">
+                          <block type="robohon_lastlistenword" id="oL2~;2FE75%hZjBRiI1."></block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="~(?X/Z)7jEYA;6V06d)K">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="($jBsY6hRzpYW`CzeRn(">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="procedures_callreturn" id="KWz-8q$s:;bx_W#$kJ@-">
+                                    <mutation name="発話を聞きとる">
+                                      <arg name="_話しかける言葉"></arg>
+                                      <arg name="_聞きとる言葉一覧"></arg>
+                                      <arg name="_聞き返す言葉一覧"></arg>
+                                    </mutation>
+                                    <value name="ARG0">
+                                      <block type="text_join" id="4|HHy[iu{s+Yd1,daq,R">
+                                        <mutation items="4"></mutation>
+                                        <value name="ADD0">
+                                          <block type="text" id="cvS|qXb;nI)qsAOH23/p">
+                                            <field name="TEXT">「</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="variables_get" id="#8CjY|-VH.:C$)Z~1Ddd">
+                                            <field name="VAR" id="?Xp/]@!8i*P$pakDcVI8" variabletype="">送る内容</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="text" id="mHenHn318^b#~Kj683Z0">
+                                            <field name="TEXT">」</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD3">
+                                          <block type="text" id="GQK@=2BUR.$/YP:ofta5">
+                                            <field name="TEXT">って送っていい？送ってよければいいよ，やっぱりやめるならダメだよ，と言ってね。</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="procedures_callreturn" id="+/u[s$[qA:c5Njk_PALr">
+                                        <mutation name="リストから連想配列を生成する">
+                                          <arg name="_キーのリスト"></arg>
+                                          <arg name="_値のリスト"></arg>
+                                        </mutation>
+                                        <value name="ARG0">
+                                          <block type="lists_create_with" id="o^QpoJ(Z}6@JpRM#Ra/Q">
+                                            <mutation items="2"></mutation>
+                                            <value name="ADD0">
+                                              <block type="text" id="jqU`,X6dvleMbLZCEq4T">
+                                                <field name="TEXT">いいよ</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="text" id="A;HrCdew!QEvB8`NLT[5">
+                                                <field name="TEXT">だめだよ</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="lists_create_with" id="tfW0o3i([J}N;~s7m#!}">
+                                            <mutation items="2"></mutation>
+                                            <value name="ADD0">
+                                              <block type="text" id="tU5]WDz}(|?-T]AAd)Sq">
+                                                <field name="TEXT">OK</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="text" id="zJf)I}i,lTp=Ip9:F}@g">
+                                                <field name="TEXT">NG</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG2">
+                                      <block type="lists_create_with" id="bs*r}.S@$gO1d`l0~@O*">
+                                        <mutation items="1"></mutation>
+                                        <value name="ADD0">
+                                          <block type="text" id="dOWN==zqd;:w?_oB)cvt">
+                                            <field name="TEXT">ごめんなさい。もう一回言ってね。</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
-                                <value name="ADD1">
-                                  <block type="variables_get" id="#8CjY|-VH.:C$)Z~1Ddd">
-                                    <field name="VAR" id="$FWq{[o;TiPZl*A)X$AQ" variabletype="">送る内容</field>
-                                  </block>
-                                </value>
-                                <value name="ADD2">
-                                  <block type="text" id="mHenHn318^b#~Kj683Z0">
-                                    <field name="TEXT">」</field>
-                                  </block>
-                                </value>
-                                <value name="ADD3">
-                                  <block type="text" id="GQK@=2BUR.$/YP:ofta5">
-                                    <field name="TEXT">って送っていい？送ってよければいいよ，やっぱりやめるならダメだよ，と言ってね。</field>
+                                <value name="B">
+                                  <block type="text" id="yC1zzqlqz1z3q2?*#JIC">
+                                    <field name="TEXT">OK</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
-                            <value name="ARG1">
-                              <block type="procedures_callreturn" id="+/u[s$[qA:c5Njk_PALr">
-                                <mutation name="リストから連想配列を生成する">
-                                  <arg name="_キーのリスト"></arg>
-                                  <arg name="_値のリスト"></arg>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="kr)nVSxp6@Bd30j2?%U(">
+                                <mutation name="LINEに通知を送る">
+                                  <arg name="_メッセージ"></arg>
+                                  <arg name="_トークン"></arg>
+                                  <arg name="_エンドポイント"></arg>
                                 </mutation>
                                 <value name="ARG0">
-                                  <block type="lists_create_with" id="o^QpoJ(Z}6@JpRM#Ra/Q">
-                                    <mutation items="2"></mutation>
-                                    <value name="ADD0">
-                                      <block type="text" id="jqU`,X6dvleMbLZCEq4T">
-                                        <field name="TEXT">いいよ</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD1">
-                                      <block type="text" id="A;HrCdew!QEvB8`NLT[5">
-                                        <field name="TEXT">だめだよ</field>
-                                      </block>
-                                    </value>
+                                  <block type="variables_get" id="Pg@4ZH*jOiLcG$OV3eCp">
+                                    <field name="VAR" id="?Xp/]@!8i*P$pakDcVI8" variabletype="">送る内容</field>
                                   </block>
                                 </value>
                                 <value name="ARG1">
-                                  <block type="lists_create_with" id="tfW0o3i([J}N;~s7m#!}">
-                                    <mutation items="2"></mutation>
-                                    <value name="ADD0">
-                                      <block type="text" id="tU5]WDz}(|?-T]AAd)Sq">
-                                        <field name="TEXT">OK</field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD1">
-                                      <block type="text" id="zJf)I}i,lTp=Ip9:F}@g">
-                                        <field name="TEXT">NG</field>
-                                      </block>
-                                    </value>
+                                  <block type="variables_get" id="rb;OUL,bVWX_L$fux.ET">
+                                    <field name="VAR" id="RK8u|3.*mnCQMh|6_~^u" variabletype="">LNIE Notifyアクセストークン</field>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block type="variables_get" id="*.M{xl?w]#2WRjfRWf{L">
+                                    <field name="VAR" id="zRgOSZIZ,y]D[BV*roMg" variabletype="">LINE Notofyエンドポイント</field>
                                   </block>
                                 </value>
                               </block>
-                            </value>
-                            <value name="ARG2">
-                              <block type="lists_create_with" id="bs*r}.S@$gO1d`l0~@O*">
-                                <mutation items="1"></mutation>
-                                <value name="ADD0">
-                                  <block type="text" id="dOWN==zqd;:w?_oB)cvt">
-                                    <field name="TEXT">ごめんなさい。もう一回言ってね。</field>
-                                  </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="robohon_speak" id="_..`Ht6KPE!Ri.yj:N9*">
+                                <value name="WORD">
+                                  <shadow type="text" id="6R61f@{mqkw+rC~Xp`I[">
+                                    <field name="TEXT">送るのやめとくね。</field>
+                                  </shadow>
                                 </value>
                               </block>
-                            </value>
+                            </statement>
                           </block>
-                        </value>
-                        <value name="B">
-                          <block type="text" id="yC1zzqlqz1z3q2?*#JIC">
-                            <field name="TEXT">OK</field>
-                          </block>
-                        </value>
+                        </next>
                       </block>
-                    </value>
-                    <statement name="DO0">
-                      <block type="procedures_callnoreturn" id="kr)nVSxp6@Bd30j2?%U(">
-                        <mutation name="LINEに通知を送る">
-                          <arg name="_メッセージ"></arg>
-                        </mutation>
-                        <value name="ARG0">
-                          <block type="variables_get" id="Pg@4ZH*jOiLcG$OV3eCp">
-                            <field name="VAR" id="$FWq{[o;TiPZl*A)X$AQ" variabletype="">送る内容</field>
-                          </block>
-                        </value>
-                      </block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="robohon_speak" id="_..`Ht6KPE!Ri.yj:N9*">
-                        <value name="WORD">
-                          <shadow type="text" id="6R61f@{mqkw+rC~Xp`I[">
-                            <field name="TEXT">送るのやめとくね。</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </statement>
+                    </next>
                   </block>
                 </next>
               </block>
@@ -164,9 +201,9 @@
   </block>
   <block type="procedures_defreturn" id="DMJzL[+YO#s?[XgwLJ*V" x="1263" y="37">
     <mutation>
-      <arg name="_話しかける言葉" varid="hNgow2kbO4Peie3Ng)g4"></arg>
-      <arg name="_聞きとる言葉一覧" varid="%s%cq(maP//?RVbXN~OH"></arg>
-      <arg name="_聞き返す言葉一覧" varid="?_5m5T3I3K0@--i}:^*_"></arg>
+      <arg name="_話しかける言葉" varid="tc{_4ib*/%QO6w9;s?4X"></arg>
+      <arg name="_聞きとる言葉一覧" varid="0J.C@sBy^-:^Tf($}I|F"></arg>
+      <arg name="_聞き返す言葉一覧" varid="W^oz;IGhXL0bY8gP1D}Y"></arg>
     </mutation>
     <field name="NAME">発話を聞きとる</field>
     <comment pinned="false" h="80" w="160">この関数の説明…</comment>
@@ -177,7 +214,7 @@
             <field name="TEXT">こんにちは</field>
           </shadow>
           <block type="variables_get" id="tJsE+`^kVftsd;40#p;t">
-            <field name="VAR" id="hNgow2kbO4Peie3Ng)g4" variabletype="">_話しかける言葉</field>
+            <field name="VAR" id="tc{_4ib*/%QO6w9;s?4X" variabletype="">_話しかける言葉</field>
           </block>
         </value>
         <next>
@@ -189,7 +226,7 @@
                   <block type="dict_in" id="j*A|RvMMb+m`P}v06T9e">
                     <value name="DICT">
                       <block type="variables_get" id="s}JA/UruY9h.!ZdFa{[)">
-                        <field name="VAR" id="%s%cq(maP//?RVbXN~OH" variabletype="">_聞きとる言葉一覧</field>
+                        <field name="VAR" id="0J.C@sBy^-:^Tf($}I|F" variabletype="">_聞きとる言葉一覧</field>
                       </block>
                     </value>
                     <value name="KEY">
@@ -201,7 +238,7 @@
                   <block type="dict_get" id="+JN7`RBZPaLd;yt=fwoB">
                     <value name="DICT">
                       <block type="variables_get" id="TQb+_o?.6r[+~O6,B4x?">
-                        <field name="VAR" id="%s%cq(maP//?RVbXN~OH" variabletype="">_聞きとる言葉一覧</field>
+                        <field name="VAR" id="0J.C@sBy^-:^Tf($}I|F" variabletype="">_聞きとる言葉一覧</field>
                       </block>
                     </value>
                     <value name="KEY">
@@ -211,10 +248,10 @@
                 </value>
                 <next>
                   <block type="controls_forEach" id="*f+V^aVs[%Mfq5=Cg;qY">
-                    <field name="VAR" id="jU;,.39)tyAM)d,CQGM1" variabletype="">_聞き返す言葉</field>
+                    <field name="VAR" id="U/oSV!6F-8)T`8WI|e|+" variabletype="">_聞き返す言葉</field>
                     <value name="LIST">
                       <block type="variables_get" id="C3n-sC;i^{h(9j[OVxB`">
-                        <field name="VAR" id="?_5m5T3I3K0@--i}:^*_" variabletype="">_聞き返す言葉一覧</field>
+                        <field name="VAR" id="W^oz;IGhXL0bY8gP1D}Y" variabletype="">_聞き返す言葉一覧</field>
                       </block>
                     </value>
                     <statement name="DO">
@@ -224,7 +261,7 @@
                             <field name="TEXT">こんにちは</field>
                           </shadow>
                           <block type="variables_get" id="$tuB=w`c9Lvj$Lr8PPzC">
-                            <field name="VAR" id="jU;,.39)tyAM)d,CQGM1" variabletype="">_聞き返す言葉</field>
+                            <field name="VAR" id="U/oSV!6F-8)T`8WI|e|+" variabletype="">_聞き返す言葉</field>
                           </block>
                         </value>
                         <next>
@@ -236,7 +273,7 @@
                                   <block type="dict_in" id="X~{;i18LvzljONO^+7~b">
                                     <value name="DICT">
                                       <block type="variables_get" id="A??c/_t9.K*?G`GX(hZi">
-                                        <field name="VAR" id="%s%cq(maP//?RVbXN~OH" variabletype="">_聞きとる言葉一覧</field>
+                                        <field name="VAR" id="0J.C@sBy^-:^Tf($}I|F" variabletype="">_聞きとる言葉一覧</field>
                                       </block>
                                     </value>
                                     <value name="KEY">
@@ -248,7 +285,7 @@
                                   <block type="dict_get" id="UYn8N6{Ke(ZSMRQHLxF2">
                                     <value name="DICT">
                                       <block type="variables_get" id="Ey0ZE;aM.$KaqF.+k^:v">
-                                        <field name="VAR" id="%s%cq(maP//?RVbXN~OH" variabletype="">_聞きとる言葉一覧</field>
+                                        <field name="VAR" id="0J.C@sBy^-:^Tf($}I|F" variabletype="">_聞きとる言葉一覧</field>
                                       </block>
                                     </value>
                                     <value name="KEY">
@@ -278,44 +315,44 @@
   </block>
   <block type="procedures_defreturn" id="8UG?vR#1m@mmOZ9cnuX~" x="1263" y="387">
     <mutation>
-      <arg name="_キーのリスト" varid="kC.yA=6RUr4?5q!H}6C0"></arg>
-      <arg name="_値のリスト" varid="0OZ=[iau@)E{UAZ7{=mS"></arg>
+      <arg name="_キーのリスト" varid="pf99tbF-ph5^_SWxVS.u"></arg>
+      <arg name="_値のリスト" varid="Ij@7O|b:HB9=|Ib1^`d:"></arg>
     </mutation>
     <field name="NAME">リストから連想配列を生成する</field>
     <comment pinned="false" h="80" w="160">キーのリストと値のリストから連想配列を生成します。リストの長さが一致しない場合は短い方に合わせます。</comment>
     <statement name="STACK">
       <block type="variables_set" id="!Zmt/F4G09smZWOOPXdC">
-        <field name="VAR" id="VdjaWe_MniD)bl,2|^no" variabletype="">_キーのリストの長さ</field>
+        <field name="VAR" id="w+s[S}vL3JNf=rH4-3r1" variabletype="">_キーのリストの長さ</field>
         <value name="VALUE">
           <block type="lists_length" id="Vr=M?7/}`H.BNG)}.qCh">
             <value name="VALUE">
               <block type="variables_get" id="hIc2Rknii|LCOZrHe),?">
-                <field name="VAR" id="kC.yA=6RUr4?5q!H}6C0" variabletype="">_キーのリスト</field>
+                <field name="VAR" id="pf99tbF-ph5^_SWxVS.u" variabletype="">_キーのリスト</field>
               </block>
             </value>
           </block>
         </value>
         <next>
           <block type="variables_set" id="G,kO$abH/=LBTmCbN%{p">
-            <field name="VAR" id="n[6Q7(Ww36cF]frsW#)F" variabletype="">_値のリストの長さ</field>
+            <field name="VAR" id="E9@f;%sP@`YnFNn5|7mk" variabletype="">_値のリストの長さ</field>
             <value name="VALUE">
               <block type="lists_length" id="l.KE7,;wg]D$Mztj@F7W">
                 <value name="VALUE">
                   <block type="variables_get" id="yRO.pD4zzCfAg$,2dLF_">
-                    <field name="VAR" id="0OZ=[iau@)E{UAZ7{=mS" variabletype="">_値のリスト</field>
+                    <field name="VAR" id="Ij@7O|b:HB9=|Ib1^`d:" variabletype="">_値のリスト</field>
                   </block>
                 </value>
               </block>
             </value>
             <next>
               <block type="variables_set" id="eA#fKFm(:K1Su$il{TT+">
-                <field name="VAR" id="]ty[Kex?cpVULP[2^.?z" variabletype="">_連想配列</field>
+                <field name="VAR" id="7iZ#ZE6H!fKVNEb=ec-f" variabletype="">_連想配列</field>
                 <value name="VALUE">
                   <block type="dict_create_empty" id="U90bv/I5Zt{6$HD,f|t["></block>
                 </value>
                 <next>
                   <block type="variables_set" id=";WbSqK*^9%CwhBvS4/y;">
-                    <field name="VAR" id="sC.zi-5G*-6AW^XxLY~a" variabletype="">_リストの長さ</field>
+                    <field name="VAR" id="(:xg[|:(4f9fMg]U@kf4" variabletype="">_リストの長さ</field>
                     <value name="VALUE">
                       <block type="logic_ternary" id="4KEM`L8:.}%GS!@LE)jR">
                         <value name="IF">
@@ -323,31 +360,31 @@
                             <field name="OP">LTE</field>
                             <value name="A">
                               <block type="variables_get" id="7/#5W_^QH#jb+lkX;=Hr">
-                                <field name="VAR" id="VdjaWe_MniD)bl,2|^no" variabletype="">_キーのリストの長さ</field>
+                                <field name="VAR" id="w+s[S}vL3JNf=rH4-3r1" variabletype="">_キーのリストの長さ</field>
                               </block>
                             </value>
                             <value name="B">
                               <block type="variables_get" id="5XwedVYV`X8g#hKZ)vU*">
-                                <field name="VAR" id="n[6Q7(Ww36cF]frsW#)F" variabletype="">_値のリストの長さ</field>
+                                <field name="VAR" id="E9@f;%sP@`YnFNn5|7mk" variabletype="">_値のリストの長さ</field>
                               </block>
                             </value>
                           </block>
                         </value>
                         <value name="THEN">
                           <block type="variables_get" id="j-t)essH?[Tj_7Ka`)ZL">
-                            <field name="VAR" id="VdjaWe_MniD)bl,2|^no" variabletype="">_キーのリストの長さ</field>
+                            <field name="VAR" id="w+s[S}vL3JNf=rH4-3r1" variabletype="">_キーのリストの長さ</field>
                           </block>
                         </value>
                         <value name="ELSE">
                           <block type="variables_get" id="Y6bMGKsS1.nYfG(CJ5Y`">
-                            <field name="VAR" id="n[6Q7(Ww36cF]frsW#)F" variabletype="">_値のリストの長さ</field>
+                            <field name="VAR" id="E9@f;%sP@`YnFNn5|7mk" variabletype="">_値のリストの長さ</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <next>
                       <block type="controls_for" id="V2h]Z`h0!/%;ul[cI2IO">
-                        <field name="VAR" id="y+6RI5R+IB~YdAbxQ;aH" variabletype="">_インデックス</field>
+                        <field name="VAR" id="YutiEGlYA[a(H6b.=U*X" variabletype="">_インデックス</field>
                         <value name="FROM">
                           <shadow type="math_number" id="3nq!WOW#oB0m[P{-bBgz">
                             <field name="NUM">1</field>
@@ -358,7 +395,7 @@
                             <field name="NUM">10</field>
                           </shadow>
                           <block type="variables_get" id="3KmW[$KD|yU)aeyVru#m">
-                            <field name="VAR" id="sC.zi-5G*-6AW^XxLY~a" variabletype="">_リストの長さ</field>
+                            <field name="VAR" id="(:xg[|:(4f9fMg]U@kf4" variabletype="">_リストの長さ</field>
                           </block>
                         </value>
                         <value name="BY">
@@ -370,7 +407,7 @@
                           <block type="dict_add" id="Y|O8kvaod.Vt6IqhCbZ.">
                             <value name="DICT">
                               <block type="variables_get" id="-Er,P#uA4FZ6Skzcv(`B">
-                                <field name="VAR" id="]ty[Kex?cpVULP[2^.?z" variabletype="">_連想配列</field>
+                                <field name="VAR" id="7iZ#ZE6H!fKVNEb=ec-f" variabletype="">_連想配列</field>
                               </block>
                             </value>
                             <value name="KEY">
@@ -380,12 +417,12 @@
                                 <field name="WHERE">FROM_START</field>
                                 <value name="VALUE">
                                   <block type="variables_get" id="M]:1-}NKQ-Rc:VOxu,vZ">
-                                    <field name="VAR" id="kC.yA=6RUr4?5q!H}6C0" variabletype="">_キーのリスト</field>
+                                    <field name="VAR" id="pf99tbF-ph5^_SWxVS.u" variabletype="">_キーのリスト</field>
                                   </block>
                                 </value>
                                 <value name="AT">
                                   <block type="variables_get" id="ghGEtEJ`y)/I3T*-cd81">
-                                    <field name="VAR" id="y+6RI5R+IB~YdAbxQ;aH" variabletype="">_インデックス</field>
+                                    <field name="VAR" id="YutiEGlYA[a(H6b.=U*X" variabletype="">_インデックス</field>
                                   </block>
                                 </value>
                               </block>
@@ -397,12 +434,12 @@
                                 <field name="WHERE">FROM_START</field>
                                 <value name="VALUE">
                                   <block type="variables_get" id="p/]q~@IV@5l[W;V%^lEb">
-                                    <field name="VAR" id="0OZ=[iau@)E{UAZ7{=mS" variabletype="">_値のリスト</field>
+                                    <field name="VAR" id="Ij@7O|b:HB9=|Ib1^`d:" variabletype="">_値のリスト</field>
                                   </block>
                                 </value>
                                 <value name="AT">
                                   <block type="variables_get" id="v*FJj|KQEo5d9R5fph,D">
-                                    <field name="VAR" id="y+6RI5R+IB~YdAbxQ;aH" variabletype="">_インデックス</field>
+                                    <field name="VAR" id="YutiEGlYA[a(H6b.=U*X" variabletype="">_インデックス</field>
                                   </block>
                                 </value>
                               </block>
@@ -421,77 +458,86 @@
     </statement>
     <value name="RETURN">
       <block type="variables_get" id="hQ?o;;[!b2^np=J^8!s;">
-        <field name="VAR" id="]ty[Kex?cpVULP[2^.?z" variabletype="">_連想配列</field>
+        <field name="VAR" id="7iZ#ZE6H!fKVNEb=ec-f" variabletype="">_連想配列</field>
       </block>
     </value>
   </block>
-  <block type="procedures_defnoreturn" id="(!{%K!pY]A,aDJR_$v~9" x="1262" y="738">
+  <block type="procedures_defnoreturn" id="(!{%K!pY]A,aDJR_$v~9" x="1263" y="763">
     <mutation>
-      <arg name="_メッセージ" varid="pBV#2rzh}]+d@3WkLM^r"></arg>
+      <arg name="_メッセージ" varid="uZ?/E;SNL_t,0A-BMpiW"></arg>
+      <arg name="_トークン" varid="GkE~Mj`^tra_K?lhh(mw"></arg>
+      <arg name="_エンドポイント" varid="s]!6^_AT-$-+QQu|{QA0"></arg>
     </mutation>
     <field name="NAME">LINEに通知を送る</field>
     <comment pinned="false" h="80" w="160">この関数の説明…</comment>
     <statement name="STACK">
-      <block type="variables_set" id="M855iA,7Hbe?w6F7uJcq">
-        <field name="VAR" id="48o@b4IWMFH?)2s{6oY." variabletype="">_応答</field>
+      <block type="variables_set" id="=70~H${43DkoRoKOsx[)">
+        <field name="VAR" id="L5/f^z/ef%3Sw%=[h.cl" variabletype="">_応答</field>
+        <comment pinned="false" h="88" w="208">本来はこのように書きたいが，WebAPIブロックのバグのため動かない</comment>
         <value name="VALUE">
-          <block type="dict_create" id="=50@j$B+t38lDJ{uxDOI">
-            <value name="VALUE">
-              <shadow type="text" id="eXM1jM3(}APDR?k;wIp(">
-                <field name="TEXT">{}</field>
+          <block type="robohon_webapi_base_new" id=":wqiFr*[0Njw)#dyAblF">
+            <mutation items="2" method="POST"></mutation>
+            <field name="METHOD">POST</field>
+            <value name="URL">
+              <shadow type="text" id="nZeQCA#*4E8_Bb;6]UX6">
+                <field name="TEXT">https://</field>
               </shadow>
-              <block type="robohon_webapi_base" id="xSp?+|mxqb/RKmiOs%*d">
-                <mutation items="2"></mutation>
-                <field name="METHOD">POST</field>
-                <value name="URL">
-                  <shadow type="text" id="m^Q2T9@iSa#(Q=T.)aXO">
-                    <field name="TEXT">https://notify-api.line.me/api/notify</field>
+              <block type="variables_get" id="p.K(jh-r_C~J?go1.,wu">
+                <field name="VAR" id="s]!6^_AT-$-+QQu|{QA0" variabletype="">_エンドポイント</field>
+              </block>
+            </value>
+            <value name="HEADER0">
+              <block type="robohon_webapi_header" id="Hj;YMd}vVV!PXnAXDUiK">
+                <value name="HEADER_NAME">
+                  <shadow type="text" id="JC*^nij?H@:w)3O~;vSU">
+                    <field name="TEXT">Authorization</field>
                   </shadow>
                 </value>
-                <value name="HEADER0">
-                  <block type="robohon_webapi_header" id=")y`Fg~2U@8Icaa#9cQ$B">
-                    <value name="HEADER_NAME">
-                      <shadow type="text" id=";+DWjq1Z[na--tgn?19G">
-                        <field name="TEXT">Authorization</field>
-                      </shadow>
-                    </value>
-                    <value name="HEADER_VALUE">
-                      <shadow type="text" id="!^S7Iuh2.d0f7x51j;I$">
-                        <field name="TEXT">Bearer [アクセストークンに書き換える]</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <value name="HEADER1">
-                  <block type="robohon_webapi_header" id="TR8Y;4-YVr,RWoPyeGF{">
-                    <value name="HEADER_NAME">
-                      <shadow type="text" id="JT,[%S?0eAV?F9qJT3_0">
-                        <field name="TEXT">Content-Type</field>
-                      </shadow>
-                    </value>
-                    <value name="HEADER_VALUE">
-                      <shadow type="text" id="scwRoZlf1/XO3e$J_s5R">
-                        <field name="TEXT">application/x-www-form-urlencoded</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <value name="WEBAPI_BODY">
-                  <shadow type="text" id="w?gGAy?`1CsPVFUJ]4MN">
+                <value name="HEADER_VALUE">
+                  <shadow type="text" id="JZiFvGPMM{]N)1?{:`}M">
                     <field name="TEXT"></field>
                   </shadow>
-                  <block type="text_join" id=".i8a3J*BCGbKkH#SKjG)">
+                  <block type="text_join" id="|)tzoY%(LZ7M./~[}XPg">
                     <mutation items="2"></mutation>
                     <value name="ADD0">
-                      <block type="text" id="IIdWR=b}_LHA5,Rm;J$w">
-                        <field name="TEXT">message=</field>
+                      <block type="text" id="QP+uT~`#4]0aCLnT,!`S">
+                        <field name="TEXT">Bearer </field>
                       </block>
                     </value>
                     <value name="ADD1">
-                      <block type="variables_get" id="a(Qfqd-y_i7Ru~ln22?w">
-                        <field name="VAR" id="pBV#2rzh}]+d@3WkLM^r" variabletype="">_メッセージ</field>
+                      <block type="variables_get" id="a_74yP1=fRs2,~?~14$}">
+                        <field name="VAR" id="GkE~Mj`^tra_K?lhh(mw" variabletype="">_トークン</field>
                       </block>
                     </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="HEADER1">
+              <block type="robohon_webapi_header" id="%^/X3ui_Yw*VP:OXCZYM">
+                <value name="HEADER_NAME">
+                  <shadow type="text" id="N7/wLikm4XMde]=%z!6F">
+                    <field name="TEXT">Content-Type</field>
+                  </shadow>
+                </value>
+                <value name="HEADER_VALUE">
+                  <shadow type="text" id="r1fdAJ@[3u~p9,S`KO[[">
+                    <field name="TEXT">application/x-www-form-urlencoded</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="WEBAPI_BODY">
+              <block type="text_join" id="j=EQ5BOmwjiH[Z:8EOvK">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="pHQ3aXv!v@qg7gBD#{:l">
+                    <field name="TEXT">message=</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="GBg?!N6Tb$pCnk/Li)3F">
+                    <field name="VAR" id="uZ?/E;SNL_t,0A-BMpiW" variabletype="">_メッセージ</field>
                   </block>
                 </value>
               </block>
@@ -500,12 +546,19 @@
         </value>
         <next>
           <block type="variables_set" id="/m$BvgLAJh;dR_$lsSo8">
-            <field name="VAR" id="Y),/[@qP$ZWU)cS+tOkC" variabletype="">_状態</field>
+            <field name="VAR" id="Rpmb9npmV}F`OE=JDZ18" variabletype="">_状態</field>
             <value name="VALUE">
               <block type="dict_get" id="XV3~s8N^18gtjS3I(FJX">
                 <value name="DICT">
-                  <block type="variables_get" id="s90TSFVm(.v/$NdBdiV$">
-                    <field name="VAR" id="48o@b4IWMFH?)2s{6oY." variabletype="">_応答</field>
+                  <block type="dict_create" id="{U]T]tMsX%)oCQHZ[[p-">
+                    <value name="VALUE">
+                      <shadow type="text" id="eXM1jM3(}APDR?k;wIp(">
+                        <field name="TEXT">{}</field>
+                      </shadow>
+                      <block type="variables_get" id="s90TSFVm(.v/$NdBdiV$">
+                        <field name="VAR" id="L5/f^z/ef%3Sw%=[h.cl" variabletype="">_応答</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <value name="KEY">
@@ -523,7 +576,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="7e:Z9)t+:sK9DS}x6uX*">
-                        <field name="VAR" id="Y),/[@qP$ZWU)cS+tOkC" variabletype="">_状態</field>
+                        <field name="VAR" id="Rpmb9npmV}F`OE=JDZ18" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -547,7 +600,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="AG|3u?sq7O^Zh62?aj|I">
-                        <field name="VAR" id="Y),/[@qP$ZWU)cS+tOkC" variabletype="">_状態</field>
+                        <field name="VAR" id="Rpmb9npmV}F`OE=JDZ18" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -571,7 +624,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="GCQ={skQ,i~z5F!Qc|Ff">
-                        <field name="VAR" id="Y),/[@qP$ZWU)cS+tOkC" variabletype="">_状態</field>
+                        <field name="VAR" id="Rpmb9npmV}F`OE=JDZ18" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
@@ -595,7 +648,7 @@
                     <field name="OP">EQ</field>
                     <value name="A">
                       <block type="variables_get" id="lWiU7M,Buli%(M$/-B1,">
-                        <field name="VAR" id="Y),/[@qP$ZWU)cS+tOkC" variabletype="">_状態</field>
+                        <field name="VAR" id="Rpmb9npmV}F`OE=JDZ18" variabletype="">_状態</field>
                       </block>
                     </value>
                     <value name="B">
